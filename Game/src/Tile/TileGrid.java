@@ -8,7 +8,7 @@ public class TileGrid {
         map = new Tile[20][15];
         for(int i = 0; i < map.length ; i++) {
             for(int j = 0 ; j < map[i].length ; j++) {
-                map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TlieType.Grass);
+                map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Grass);
             }
         }
     }
@@ -30,13 +30,13 @@ public class TileGrid {
             for(int j = 0 ; j < map[i].length ; j++) {
                 switch(newMap[j][i]) {
                     case 0:
-                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TlieType.Grass);
+                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Grass);
                         break;
                     case 1:
-                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TlieType.Sand);
+                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Sand);
                         break;
                     case 2:
-                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TlieType.Rock);
+                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Rock);
                         break;
                 }
 
@@ -44,7 +44,7 @@ public class TileGrid {
         }
     }
 
-    public void SetTile(int xCoord , int yCoord , TlieType type) {
+    public void SetTile(int xCoord , int yCoord , TileType type) {
         map[xCoord][yCoord] = new Tile(xCoord * 32 , yCoord*32 , 32 ,32 , type);
     }
 
@@ -52,7 +52,7 @@ public class TileGrid {
         if(X >= 0 && X < TileWidth && Y >= 0 && Y < TileHeight) {
             return map[X][Y];
         } else {
-            return new Tile(0 , 0 , 0 , 0 , TlieType.NULL);
+            return new Tile(0 , 0 , 0 , 0 , TileType.NULL);
         }
     }
 

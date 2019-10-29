@@ -24,6 +24,7 @@ public class BasicTower {
     private ArrayList<Enemy> enemies;
     private Enemy target;
     public static final float RANGE = 160;
+    public static int buyingCost;
 
     public BasicTower(Texture baseTexture, Tile startTile, int damage, ArrayList<Enemy> enemies) {
         this.baseTexture = baseTexture;
@@ -40,6 +41,7 @@ public class BasicTower {
         this.enemies = enemies;
         this.target = getTarget();
         this.angle = calculateAngle();
+        this.buyingCost = 50;
     }
 
     private float distance(Enemy enemy) {
@@ -116,5 +118,13 @@ public class BasicTower {
 
     public void setEnemies(ArrayList<Enemy> enemies) {
         this.enemies = enemies;
+    }
+
+    public int getBuyingCost() {
+        return buyingCost;
+    }
+
+    public void setBuyingCost(int buyingCost) {
+        this.buyingCost = buyingCost;
     }
 }

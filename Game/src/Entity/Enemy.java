@@ -1,5 +1,6 @@
 package Entity;
 
+import Player.Player;
 import Tile.Tile;
 import Tile.TileGrid;
 import org.newdawn.slick.opengl.Texture;
@@ -12,6 +13,7 @@ import  static helpers.Artist.*;
 public class Enemy {
     private int width , height , health , currentCheckPoint;
     private float x , y , speed;
+    private int damage;
     private Texture texture;
     private Tile startTile;
     private boolean first = true , alive = true;
@@ -20,6 +22,7 @@ public class Enemy {
     private ArrayList<CheckPoint>	checkpoints;
     private int[] directions;
     private final int HEALTH = 10;
+    private int reward;
 
 
     public TileGrid getGrid() {
@@ -38,7 +41,8 @@ public class Enemy {
         this.checkpoints = new ArrayList<CheckPoint>();
         this.directions = new int[2];
         this.health = 10;
-
+        this.reward = 20;
+        this.damage = 1;
         // Direction x
         this.directions[0] = 0;
 
@@ -80,6 +84,7 @@ public class Enemy {
         health = health - damage;
         if(health <= 0){
             Die();
+            Player.addCredits(reward);
         }
     }
 
@@ -154,6 +159,7 @@ public class Enemy {
             if(CheckPointReach()) {
                 if(currentCheckPoint + 1 == checkpoints.size()) {
                     Die();
+                    Player.isAttack(damage);
                 } else {
                     currentCheckPoint ++;
                 }

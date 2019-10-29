@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="" />
+    <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Tile/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Tile/TileGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/TileGrid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Tile/TlieType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/TileGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/TlieType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileType.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +31,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1SdBWRAfdPTSEe3OY8YIART2CBd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java-tower-defense-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -112,11 +132,23 @@
       <workItem from="1571883637768" duration="36599000" />
       <workItem from="1572184604193" duration="688000" />
       <workItem from="1572239228664" duration="60000" />
-      <workItem from="1572248339476" duration="18030000" />
+      <workItem from="1572248339476" duration="18443000" />
+      <workItem from="1572364825604" duration="3233000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

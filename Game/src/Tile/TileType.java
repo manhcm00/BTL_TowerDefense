@@ -1,6 +1,6 @@
 package Tile;
 
-public enum TlieType {
+public enum TileType {
 
 
     Grass("grass" , true) , Sand("sand" , false), Rock("rock" , false) , NULL("rock" , false);
@@ -9,7 +9,7 @@ public enum TlieType {
     boolean buildable;
 
 
-    TlieType(String textureName , boolean buildable){
+    TileType(String textureName , boolean buildable){
         this.textureName = textureName;
         this.buildable = buildable;
     }

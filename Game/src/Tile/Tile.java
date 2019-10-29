@@ -8,12 +8,12 @@ public class Tile {
 
     private float x , y , width , height;
     private Texture texture;
-    private TlieType type;
+    private TileType type;
     private boolean solic;
 
 
 
-    public Tile(float x , float y , float width , float height , TlieType type) {
+    public Tile(float x , float y , float width , float height , TileType type) {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -95,13 +95,13 @@ public class Tile {
 
 
 
-    public TlieType getType() {
+    public TileType getType() {
         return type;
     }
 
 
 
-    public void setType(TlieType type) {
+    public void setType(TileType type) {
         this.type = type;
     }
 
