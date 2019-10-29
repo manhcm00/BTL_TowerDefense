@@ -161,7 +161,6 @@ public class Enemy {
                 x += Delta() * checkpoints.get(currentCheckPoint).getxDirection() * speed;
                 y += Delta() * checkpoints.get(currentCheckPoint).getyDirection() * speed;
             }
-
         }
     }
 

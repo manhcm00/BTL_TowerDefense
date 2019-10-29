@@ -44,7 +44,6 @@ public class Player {
 
 		 if(Mouse.isButtonDown(0) && !leftMouseButtonDown) {
 			 towerList.add(new BasicTower(QuickLoad("enemy"), grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32), 10, waveManager.getCurrentWave().getEnemyList()));
-			 //SetTile();
 		 }
 		 for(BasicTower t : towerList){
 		 	t.setEnemies(waveManager.getCurrentWave().getEnemyList());

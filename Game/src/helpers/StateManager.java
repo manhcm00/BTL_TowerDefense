@@ -21,11 +21,18 @@ public class StateManager {
                 mainMenu.update();
                 break;
             case GAME:
+                if (game == null)
+                    game = new Game();
+                game.update();
 
                 break;
             case EDITOR:
 
                 break;
         }
+    }
+
+    public static void setState(GameState newState) {
+        gameState = newState;
     }
 }
