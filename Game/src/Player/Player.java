@@ -20,7 +20,7 @@ public class Player {
 	 private int index;
 	 private WaveManager waveManager;
 	 private ArrayList<BasicTower> towerList;
-	 private boolean leftMouseButtonDown;
+	 public boolean leftMouseButtonDown;
 	 
 	 
 	 public Player( TileGrid grid, WaveManager waveManager) {
@@ -43,7 +43,8 @@ public class Player {
 	 	for (BasicTower t : towerList) t.update();
 
 		 if(Mouse.isButtonDown(0) && !leftMouseButtonDown) {
-			 towerList.add(new BasicTower(QuickLoad("enemy"), grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32), 10, waveManager.getCurrentWave().getEnemyList()));
+		 	if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TlieType.Sand)
+			 	towerList.add(new BasicTower(QuickLoad("enemy"), grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32), 10, waveManager.getCurrentWave().getEnemyList()));
 		 }
 		 for(BasicTower t : towerList){
 		 	t.setEnemies(waveManager.getCurrentWave().getEnemyList());
