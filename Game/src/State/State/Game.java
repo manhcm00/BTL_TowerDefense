@@ -26,7 +26,7 @@ public class Game {
 
         Enemy e = new Enemy(QuickLoad("enemy") , grid.getTile(1 , 0) , grid , 32 , 32 , 3);
 
-        waveManager = new WaveManager(e , 15, 3);
+        waveManager = new WaveManager(e , 15, 100);
 
         player = new Player(grid, waveManager);
     }

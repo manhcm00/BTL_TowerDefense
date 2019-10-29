@@ -9,6 +9,7 @@ public class Tile {
     private float x , y , width , height;
     private Texture texture;
     private TlieType type;
+    private boolean solic;
 
 
 
@@ -19,6 +20,7 @@ public class Tile {
         this.height = height;
         this.type = type;
         this.texture = QuickLoad(type.textureName);
+        this.solic = false;
     }
 
     public void Draw() {
@@ -103,4 +105,11 @@ public class Tile {
         this.type = type;
     }
 
+    public boolean isSolic() {
+        return solic;
+    }
+
+    public void setSolic(boolean solic) {
+        this.solic = solic;
+    }
 }

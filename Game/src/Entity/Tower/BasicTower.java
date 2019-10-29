@@ -51,13 +51,16 @@ public class BasicTower {
     private Enemy getTarget() {
 
         for (int i = 0; i< enemies.size(); i++) {
-            if (enemies.get(i).isAlive() ) return enemies.get(i);
+            if (enemies.get(i).isAlive()) {
+                if (distance(enemies.get(i)) <= RANGE)
+                    return enemies.get(i);
+            }
         }
         return null;
     }
 
     public float calculateAngle() {
-        if(!enemies.isEmpty())
+        if(getTarget() != null)
             return (float) Math.toDegrees(Math.atan2((getTarget().getY() - y), (getTarget().getX() - x)));
         else return 0;
     }
