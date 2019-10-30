@@ -13,9 +13,8 @@ public class UI {
 
     public UI() {
         buttons = new ArrayList<Button>();
-        buttons.add(new Button("Play", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 -100));
-        buttons.add(new Button("Editor", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 ));
-        buttons.add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 + 100));
+        buttons.add(new Button("Play", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 -50));
+        buttons.add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 + 50));
 
     }
 

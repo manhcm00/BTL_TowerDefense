@@ -1,17 +1,12 @@
 package State.State;
 
-import Entity.Enemy;
-import Entity.Tower.BasicTower;
-import Entity.Tower.WaveManager;
-import Entity.Wave;
+import Entity.Enemy.Enemies.NormalEnemy;
+import Entity.Enemy.Enemy;
+import Entity.Enemy.WaveManager;
 import Map.NormalMap;
 import Tile.TileGrid;
 import Player.Player;
-import helpers.Clock;
-import helpers.StateManager;
-import org.lwjgl.opengl.Display;
 
-import static helpers.Artist.BeginSession;
 import static helpers.Artist.QuickLoad;
 
 public class Game {
@@ -24,9 +19,9 @@ public class Game {
     public Game() {
         grid = new TileGrid(NormalMap.map);
 
-        Enemy e = new Enemy(QuickLoad("enemy") , grid.getTile(1 , 0) , grid , 32 , 32 , 3);
+        Enemy e = new NormalEnemy(grid.getTile(1 , 0) , grid , 32 , 32);
 
-        waveManager = new WaveManager(e , 15, 100);
+        waveManager = new WaveManager(e , 20, 5);
 
         player = new Player(grid, waveManager);
     }

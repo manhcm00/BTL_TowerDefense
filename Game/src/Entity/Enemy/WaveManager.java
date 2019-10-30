@@ -1,7 +1,4 @@
-package Entity.Tower;
-
-import Entity.Enemy;
-import Entity.Wave;
+package Entity.Enemy;
 
 public class WaveManager {
 

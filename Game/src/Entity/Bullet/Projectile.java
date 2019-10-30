@@ -1,13 +1,15 @@
-package Entity.Tower;
+package Entity.Bullet;
 
-import Entity.Enemy;
+import Entity.Enemy.Enemy;
+import Entity.Entity;
+import Entity.Tower.BasicTower;
 import State.State.Game;
 import org.newdawn.slick.opengl.Texture;
 
 import static helpers.Artist.drawQuadTex;
 import static helpers.Clock.Delta;
 
-public class Projectile {
+public class Projectile implements Entity {
     private Texture texture;
     private float x, y, speed;
     private int damage;
@@ -18,7 +20,7 @@ public class Projectile {
     private boolean arrivedAtTarget;
 
 
-    public Projectile(Texture texture, Enemy target,float speed, int damage, BasicTower tower) {
+    public Projectile(Texture texture, Enemy target, float speed, int damage, BasicTower tower) {
         this.texture = texture;
         this.x = tower.getX() + Game.TILE_SIZE / 2 - 3;
         this.y = tower.getY() + Game.TILE_SIZE / 2 - 3;
@@ -49,11 +51,11 @@ public class Projectile {
         else {
             x += xVloctity * Delta() * speed;
             y += yVloctity * Delta() * speed;
-            draw();
+            Draw();
         }
     }
 
-    public void draw() {
+    public void Draw() {
         drawQuadTex(texture, x, y, 6, 6);
     }
 
@@ -63,5 +65,26 @@ public class Projectile {
 
     public void setArrivedAtTarget(boolean arrivedAtTarget) {
         this.arrivedAtTarget = arrivedAtTarget;
+    }
+
+
+    @Override
+    public float getX() {
+        return x;
+    }
+
+    @Override
+    public float getY() {
+        return y;
+    }
+
+    @Override
+    public void setX(float x) {
+
+    }
+
+    @Override
+    public void setY(float y) {
+
     }
 }

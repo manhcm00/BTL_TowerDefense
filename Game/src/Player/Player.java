@@ -1,7 +1,10 @@
 package Player;
 
+import Entity.Enemy.WaveManager;
 import Entity.Tower.BasicTower;
-import Entity.Tower.WaveManager;
+import Entity.Tower.MachineGunTower;
+import Entity.Tower.NormalTower;
+import Entity.Tower.SniperTower;
 import Tile.TileGrid;
 import Tile.TileType;
 import helpers.Clock;
@@ -48,10 +51,12 @@ public class Player {
 	 
 	 public void Update() {
 	 	 for (BasicTower t : towerList) t.update();
-		 if(Mouse.isButtonDown(0) && !leftMouseButtonDown && !grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).isSolic() && this.credits >= BasicTower.buyingCost) {
+		 if(Mouse.isButtonDown(0)
+				 && !leftMouseButtonDown && !grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).isSolic()
+				 && this.credits >= BasicTower.buyingCost) {
 		 	if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TileType.Sand)
-			 	towerList.add(new BasicTower(QuickLoad("enemy"), grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32), 10, waveManager.getCurrentWave().getEnemyList()));
-			 	grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).setSolic(true);
+			 	towerList.add(new MachineGunTower(grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32), waveManager.getCurrentWave().getEnemyList()));
+		 		grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).setSolic(true);
 			 	this.credits -= BasicTower.buyingCost;
 		 }
 		 for(BasicTower t : towerList){

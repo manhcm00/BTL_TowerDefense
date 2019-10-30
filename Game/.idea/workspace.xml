@@ -2,20 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Enemy/CheckPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/BossEnemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/NormalEnemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/SmallerEnemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/TankerEnemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/snipertower.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/CheckPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/Projectile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/WaveManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Wave.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Tile/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Tile/TileGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/TileGrid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Tile/TlieType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/Laucher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/Editor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/UI/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/UI/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/helpers/StateManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager$GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/helpers/StateManager$GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/helpers/StateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CheckPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/WaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/WaveManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Wave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/TileGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/TlieType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/Laucher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/Editor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/StateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/StateManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +54,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -40,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java-tower-defense-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,11 +81,15 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="State.State" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\Downloads\eclipse-workspace\eclipse-workspace\Game\src\res" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Entity.Bullet" />
+      <recent name="Entity.Enemy" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="State.State" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -133,7 +166,9 @@
       <workItem from="1572184604193" duration="688000" />
       <workItem from="1572239228664" duration="60000" />
       <workItem from="1572248339476" duration="18443000" />
-      <workItem from="1572364825604" duration="3233000" />
+      <workItem from="1572364825604" duration="3732000" />
+      <workItem from="1572416212304" duration="165000" />
+      <workItem from="1572417247213" duration="11235000" />
     </task>
     <servers />
   </component>
@@ -145,7 +180,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

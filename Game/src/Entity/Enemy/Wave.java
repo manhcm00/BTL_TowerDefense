@@ -1,8 +1,11 @@
-package Entity;
+package Entity.Enemy;
+
+import Entity.Enemy.Enemies.NormalEnemy;
+import Entity.Enemy.Enemies.TankerEnemy;
 
 import java.util.ArrayList;
-import static helpers.Clock.*;
 
+import static helpers.Clock.Delta;
 
 
 public class Wave {
@@ -40,7 +43,7 @@ public class Wave {
             }
             else {
                 allEnemiesDead = false;
-                e.Update();
+                e.update();
                 e.Draw();
             }
         }
@@ -50,8 +53,8 @@ public class Wave {
     }
 
     private void Spawn() {
-        enemyList.add(new Enemy( enemyType.getTexture() , enemyType.getStartTile() , enemyType.getGrid() ,  32 ,
-                32 , enemyType.getSpeed()));
+        enemyList.add(new TankerEnemy(enemyType.getStartTile() , enemyType.getGrid() ,  32 ,
+                32));
     }
 
     public boolean isCompleted() {

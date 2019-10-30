@@ -1,6 +1,5 @@
 package helpers;
 
-import State.State.Editor;
 import State.State.Game;
 import State.State.MainMenu;
 
@@ -11,7 +10,6 @@ public class StateManager {
     public static GameState gameState = GameState.MAINMENU;
     public static MainMenu mainMenu;
     public static Game game;
-    public static Editor editor;
 
     public static void update() {
         switch (gameState) {
@@ -24,9 +22,6 @@ public class StateManager {
                 if (game == null)
                     game = new Game();
                 game.update();
-
-                break;
-            case EDITOR:
 
                 break;
         }

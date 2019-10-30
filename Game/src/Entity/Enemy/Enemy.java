@@ -1,5 +1,6 @@
-package Entity;
+package Entity.Enemy;
 
+import Entity.Entity;
 import Player.Player;
 import Tile.Tile;
 import Tile.TileGrid;
@@ -10,39 +11,37 @@ import java.util.ArrayList;
 
 import  static helpers.Artist.*;
 
-public class Enemy {
-    private int width , height , health , currentCheckPoint;
-    private float x , y , speed;
-    private int damage;
-    private Texture texture;
-    private Tile startTile;
-    private boolean first = true , alive = true;
-    private TileGrid grid;
+public abstract class Enemy implements Entity {
+    protected int width , height , health , currentCheckPoint;
+    protected float x , y , speed;
+    protected int damage;
+    protected Texture texture;
+    protected Tile startTile;
+    protected boolean first = true , alive = true;
+    protected TileGrid grid;
 
-    private ArrayList<CheckPoint>	checkpoints;
-    private int[] directions;
-    private final int HEALTH = 10;
-    private int reward;
+    protected ArrayList<CheckPoint>	checkpoints;
+    protected int[] directions;
+    protected final int HEALTH = 10;
+    protected int reward;
 
 
-    public TileGrid getGrid() {
-        return grid;
-    }
 
-    public Enemy(Texture texture , Tile startTile , TileGrid grid  , int width , int height , float speed) {
-        this.texture = texture;
+
+    public Enemy(Tile startTile , TileGrid grid  , int width , int height) {
+        //this.texture = texture;
         this.startTile = startTile;
         this.x = startTile.getX();
         this.y = startTile.getY();
         this.height = height;
         this.width = width;
-        this.speed = speed;
         this.grid = grid;
         this.checkpoints = new ArrayList<CheckPoint>();
         this.directions = new int[2];
-        this.health = 10;
-        this.reward = 20;
-        this.damage = 1;
+        //this.speed = speed;
+        //this.health = 10;
+        //this.reward = 20;
+        //this.damage = 1;
         // Direction x
         this.directions[0] = 0;
 
@@ -119,8 +118,9 @@ public class Enemy {
         return reached;
     }
 
-
-
+    public TileGrid getGrid() {
+        return grid;
+    }
 
     // tim huong tiep theo
     private int[] FindNextD(Tile s) {
@@ -153,7 +153,7 @@ public class Enemy {
         return dir;
     }
 
-    public void Update() {
+    public void update() {
         if(first)	first = false;
         else {
             if(CheckPointReach()) {
