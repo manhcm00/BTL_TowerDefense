@@ -1,6 +1,8 @@
 package Entity.Enemy;
 
+import Entity.Enemy.Enemies.BossEnemy;
 import Entity.Enemy.Enemies.NormalEnemy;
+import Entity.Enemy.Enemies.SmallerEnemy;
 import Entity.Enemy.Enemies.TankerEnemy;
 
 import java.util.ArrayList;
@@ -38,13 +40,14 @@ public class Wave {
         }
 
         for(Enemy e : enemyList ) {
-            if(!e.isAlive()) {
-                //enemyList.remove(e);
-            }
-            else {
+            if(e.isAlive()) {
                 allEnemiesDead = false;
                 e.update();
                 e.Draw();
+            }
+            else {
+                if (enemyList.size() > 1)
+                    enemyList.remove(e);
             }
         }
         if (allEnemiesDead) {
@@ -53,8 +56,7 @@ public class Wave {
     }
 
     private void Spawn() {
-        enemyList.add(new TankerEnemy(enemyType.getStartTile() , enemyType.getGrid() ,  32 ,
-                32));
+        enemyList.add(new SmallerEnemy(enemyType.getStartTile() , enemyType.getGrid() ,  32 , 32));
     }
 
     public boolean isCompleted() {

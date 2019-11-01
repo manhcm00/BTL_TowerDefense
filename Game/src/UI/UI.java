@@ -13,15 +13,12 @@ public class UI {
 
     public UI() {
         buttons = new ArrayList<Button>();
-        buttons.add(new Button("Play", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 -50));
-        buttons.add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 + 50));
 
     }
 
     public boolean isButtonClicked(String buttonName) {
         Button b = getButton(buttonName);
         float mouseY= HEIGHT - Mouse.getY() - 1;
-        System.out.println(Mouse.getX() + " " + Mouse.getY());
         if (Mouse.getX() > b.getX() && Mouse.getX() < b.getX() + b.getWidth()
                 && mouseY > b.getY() && mouseY < b.getY() + b.getHeight())
             return true;

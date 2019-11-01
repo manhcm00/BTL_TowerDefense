@@ -16,8 +16,8 @@ public class TankerEnemy extends Enemy {
         this.damage = DAMAGE;
     }
 
-    public static Texture NormalEnemy = QuickLoad("enemy");
-    private static final float SPEED = 1;
+    public static Texture NormalEnemy = QuickLoad("enemyTanker");
+    private static final float SPEED = 2;
     private static final int HEALTH = 20;
     private static final int REWARD = 30;
     private static final int DAMAGE = 1;

@@ -5,6 +5,7 @@ import Entity.Tower.BasicTower;
 import Entity.Tower.MachineGunTower;
 import Entity.Tower.NormalTower;
 import Entity.Tower.SniperTower;
+import Tile.Tile;
 import Tile.TileGrid;
 import Tile.TileType;
 import helpers.Clock;
@@ -26,6 +27,10 @@ public class Player {
 	 private static int credits = 0;
 	 private static int health;
 	 private boolean leftMouseButtonDown;
+	 private boolean rightMouseButtonDown;
+	 private boolean holdingTower;
+	 private BasicTower tempTower;
+
 
 	private static final int STARTINGCREDITS = 200;
 	private static final int STARTINGHEALTH = 5;
@@ -41,28 +46,37 @@ public class Player {
 		 this.waveManager = waveManager;
 		 towerList = new ArrayList<BasicTower>();
 		 this.leftMouseButtonDown = false;
+		 this.rightMouseButtonDown = false;
 		 this.health = STARTINGHEALTH;
 		 this.credits = STARTINGCREDITS;
+		 this.holdingTower = false;
+		 this.tempTower = null;
 	 }
 	 
-	 public void SetTile(  ) {
+	 public void SetTile() {
 		 grid.SetTile((int) Math.floor ( Mouse.getX() / 32 ) , (int) Math.floor ((HEIGHT - Mouse.getY() - 1) / 32), types[index]);
 	 }
 	 
 	 public void Update() {
-	 	 for (BasicTower t : towerList) t.update();
-		 if(Mouse.isButtonDown(0)
-				 && !leftMouseButtonDown && !grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).isSolic()
-				 && this.credits >= BasicTower.buyingCost) {
-		 	if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TileType.Sand)
-			 	towerList.add(new MachineGunTower(grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32), waveManager.getCurrentWave().getEnemyList()));
-		 		grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).setSolic(true);
-			 	this.credits -= BasicTower.buyingCost;
+
+	 	if (holdingTower) {
+	 		this.tempTower.setX(getMouseTile().getX());
+	 		this.tempTower.setY(getMouseTile().getY());
+	 		tempTower.Draw();
+		}
+
+
+		 if(Mouse.isButtonDown(0) && !leftMouseButtonDown) {
+		 	placeTower();
 		 }
+
 		 for(BasicTower t : towerList){
 		 	t.setEnemies(waveManager.getCurrentWave().getEnemyList());
+		 	t.update();
 		 }
+
 		 leftMouseButtonDown = Mouse.isButtonDown(0);
+		 rightMouseButtonDown = Mouse.isButtonDown(1);
 
 		 while(Keyboard.next()) {
 			 if( Keyboard.getEventKey() == Keyboard.KEY_RIGHT && Keyboard.getEventKeyState() ) {
@@ -80,10 +94,38 @@ public class Player {
 			 index = 0;
 		 }
 	 }
+
+	 private void placeTower() {
+	 	if (holdingTower) {
+			if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TileType.Sand
+					&& !grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).isSolic()
+					&& this.credits >= tempTower.getBuyingCost()) {
+				towerList.add(tempTower);
+				grid.getTile(Mouse.getX() / 32, (HEIGHT - Mouse.getY() - 1) / 32).setSolic(true);
+				this.credits -= BasicTower.buyingCost;
+			}
+			holdingTower = false;
+			tempTower = null;
+			System.out.println(credits);
+		}
+	 }
+
+	 private Tile getMouseTile() {
+	 	return grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32);
+	 }
 	 
 	 public static void addCredits(int amount) {
 	 	credits += amount;
 	 }
 	 
 	 public static void isAttack(int damage) {health -= damage;}
+
+	public BasicTower getTempTower() {
+		return tempTower;
+	}
+
+	public void setTempTower(BasicTower tempTower) {
+		this.tempTower = tempTower;
+		holdingTower = true;
+	}
 }

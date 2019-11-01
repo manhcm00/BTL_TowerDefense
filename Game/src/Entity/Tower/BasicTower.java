@@ -1,6 +1,6 @@
 package Entity.Tower;
 
-import Entity.Bullet.Projectile;
+import Entity.Bullet.Bullet;
 import Entity.Enemy.Enemy;
 import Entity.Entity;
 import Tile.Tile;
@@ -22,7 +22,7 @@ public abstract class BasicTower implements Entity {
     protected int damage;
     protected Texture basicTexture;
     protected Tile startTile;
-    protected ArrayList<Projectile> projectiles;
+    protected ArrayList<Bullet> projectiles;
     protected ArrayList<Enemy> enemies;
     protected Enemy target;
     protected float range;
@@ -36,19 +36,19 @@ public abstract class BasicTower implements Entity {
         this.width =(int) startTile.getWidth();
         this.height =(int) startTile.getHeight();
         this.timeSinceLastShot = 0;
-        this.projectiles = new ArrayList<Projectile>();
+        this.projectiles = new ArrayList<Bullet>();
         this.enemies = enemies;
         this.target = getTarget();
         this.angle = calculateAngle();
     }
 
-    private float distance(Enemy enemy) {
+    protected float distance(Enemy enemy) {
         if (enemy != null)
             return (float) Math.sqrt((enemy.getX() - x)*(enemy.getX() - x) + (enemy.getY() - y)* (enemy.getY() - y));
         else return 10000;
     }
 
-    private Enemy getTarget() {
+    protected Enemy getTarget() {
 
         for (int i = 0; i< enemies.size(); i++) {
             if (enemies.get(i).isAlive()) {
@@ -65,23 +65,14 @@ public abstract class BasicTower implements Entity {
         else return 0;
     }
 
-    private void shoot() {
-        timeSinceLastShot = 0;
-        if (getTarget() != null && distance(getTarget()) < this.range)
-            projectiles.add(new Projectile(QuickLoad("bullet") , getTarget(), 100 ,2, this));
-        if(!projectiles.isEmpty() && distance(getTarget()) < this.range) {
-            for (Projectile p : projectiles) {
-                if (p.isArrivedAtTarget()) projectiles.remove(p);
-            }
-        }
-    }
+    abstract protected void shoot();
 
     public void update() {
         timeSinceLastShot += Delta();
         if (timeSinceLastShot >= firingSpeed) {
             shoot();
         }
-        for (Projectile p : projectiles) p.update();
+        for (Bullet p : projectiles) p.update();
 
         if (!enemies.isEmpty() && distance(getTarget()) < this.range) {
             angle = calculateAngle();

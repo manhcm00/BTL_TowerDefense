@@ -18,9 +18,12 @@ public class MainMenu {
     public MainMenu() {
         background = QuickLoad("menu");
         menuUI = new UI();
-        for (Button b : menuUI.getButtons()) {
-            System.out.println(b.getX() + " " + b.getY());
-        }
+        setup();
+    }
+
+    private void setup() {
+        menuUI.getButtons().add(new Button("Play", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 -50));
+        menuUI.getButtons().add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 + 50));
     }
 
     private void updateButton() {

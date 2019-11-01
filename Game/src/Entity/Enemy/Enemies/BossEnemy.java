@@ -16,7 +16,7 @@ public class BossEnemy extends Enemy {
         this.damage = DAMAGE;
     }
 
-    public static Texture NormalEnemy = QuickLoad("enemy");
+    public static Texture NormalEnemy = QuickLoad("enemyBoss");
     private static final float SPEED = 1;
     private static final int HEALTH = 30;
     private static final int REWARD = 200;

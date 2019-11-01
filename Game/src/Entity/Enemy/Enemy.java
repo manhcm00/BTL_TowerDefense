@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import  static helpers.Artist.*;
 
 public abstract class Enemy implements Entity {
-    protected int width , height , health , currentCheckPoint;
-    protected float x , y , speed;
+    protected int width , height , currentCheckPoint;
+    protected float x , y , speed, health;
     protected int damage;
     protected Texture texture;
     protected Tile startTile;
@@ -22,14 +22,9 @@ public abstract class Enemy implements Entity {
 
     protected ArrayList<CheckPoint>	checkpoints;
     protected int[] directions;
-    protected final int HEALTH = 10;
     protected int reward;
 
-
-
-
     public Enemy(Tile startTile , TileGrid grid  , int width , int height) {
-        //this.texture = texture;
         this.startTile = startTile;
         this.x = startTile.getX();
         this.y = startTile.getY();
@@ -38,10 +33,6 @@ public abstract class Enemy implements Entity {
         this.grid = grid;
         this.checkpoints = new ArrayList<CheckPoint>();
         this.directions = new int[2];
-        //this.speed = speed;
-        //this.health = 10;
-        //this.reward = 20;
-        //this.damage = 1;
         // Direction x
         this.directions[0] = 0;
 
@@ -79,11 +70,10 @@ public abstract class Enemy implements Entity {
         return c;
     }
 
-    public void takeDamage(int damage){
+    public void takeDamage(float damage){
         health = health - damage;
         if(health <= 0){
             Die();
-            Player.addCredits(reward);
         }
     }
 
@@ -158,8 +148,7 @@ public abstract class Enemy implements Entity {
         else {
             if(CheckPointReach()) {
                 if(currentCheckPoint + 1 == checkpoints.size()) {
-                    Die();
-                    Player.isAttack(damage);
+                    CompletedMission();
                 } else {
                     currentCheckPoint ++;
                 }
@@ -176,6 +165,12 @@ public abstract class Enemy implements Entity {
 
     public void Die() {
         if(alive)	alive = false;
+        Player.addCredits(this.reward);
+    }
+
+    public void CompletedMission() {
+        if (alive) alive = false;
+        Player.isAttack(this.damage);
     }
 
     public void Draw() {
@@ -198,7 +193,7 @@ public abstract class Enemy implements Entity {
         this.height = height;
     }
 
-    public int getHealth() {
+    public float getHealth() {
         return health;
     }
 

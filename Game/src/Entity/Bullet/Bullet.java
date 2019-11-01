@@ -9,26 +9,24 @@ import org.newdawn.slick.opengl.Texture;
 import static helpers.Artist.drawQuadTex;
 import static helpers.Clock.Delta;
 
-public class Projectile implements Entity {
-    private Texture texture;
-    private float x, y, speed;
-    private int damage;
-    private Enemy target;
-    private BasicTower tower;
-    private float xVloctity, yVloctity;
-    private float xDest , yDest;
-    private boolean arrivedAtTarget;
+public abstract class Bullet implements Entity {
+    protected Texture texture;
+    protected float x, y, speed;
+    protected float damage;
+    protected Enemy target;
+    protected BasicTower tower;
+    protected float xVloctity, yVloctity;
+    protected float xDest , yDest;
+    protected boolean arrivedAtTarget;
 
 
-    public Projectile(Texture texture, Enemy target, float speed, int damage, BasicTower tower) {
-        this.texture = texture;
+    public Bullet(Enemy target, BasicTower tower) {
         this.x = tower.getX() + Game.TILE_SIZE / 2 - 3;
         this.y = tower.getY() + Game.TILE_SIZE / 2 - 3;
-        this.speed = speed;
-        this.damage = damage;
         this.target = target;
         this.tower = tower;
-        xDest = target.getX(); yDest = target.getY();
+        xDest = target.getX();
+        yDest = target.getY();
         xVloctity = 0f;
         yVloctity = 0f;
         calculateDirection();
