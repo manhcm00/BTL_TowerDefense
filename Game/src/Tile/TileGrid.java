@@ -1,5 +1,9 @@
 package Tile;
 
+import org.newdawn.slick.opengl.Texture;
+
+import static helpers.Artist.*;
+
 public class TileGrid {
     public Tile[][] map;
     public int TileWidth , TileHeight;

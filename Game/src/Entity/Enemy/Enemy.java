@@ -13,7 +13,7 @@ import  static helpers.Artist.*;
 
 public abstract class Enemy implements Entity {
     protected int width , height , currentCheckPoint;
-    protected float x , y , speed, health;
+    protected float x , y , speed, health, armor;
     protected int damage;
     protected Texture texture;
     protected Tile startTile;
@@ -71,7 +71,7 @@ public abstract class Enemy implements Entity {
     }
 
     public void takeDamage(float damage){
-        health = health - damage;
+        health = health - damage/armor;
         if(health <= 0){
             Die();
         }

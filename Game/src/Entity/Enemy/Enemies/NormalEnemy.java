@@ -15,6 +15,7 @@ public class NormalEnemy extends Enemy {
         this.health = HEALTH;
         this.reward = REWARD;
         this.damage = DAMAGE;
+        this.armor = ARMOR;
     }
 
     public static Texture NormalEnemy = QuickLoad("enemyNormal");
@@ -22,4 +23,5 @@ public class NormalEnemy extends Enemy {
     private static final int HEALTH = 10;
     private static final int REWARD = 20;
     private static final int DAMAGE = 1;
+    private static final float ARMOR = 1;
 }

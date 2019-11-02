@@ -26,17 +26,16 @@ public class Game {
 
     public Game() {
         grid = new TileGrid(NormalMap.map);
-        Enemy e = new BossEnemy(grid.getTile(1 , 0) , grid , 32 , 32);
-        waveManager = new WaveManager(e , 20, 1);
+        waveManager = new WaveManager(grid.getTile(1 , 0), grid,20);
         player = new Player(grid, waveManager);
         setup();
     }
 
     private void setup() {
         towerPickerUI = new UI();
-        towerPickerUI.getButtons().add(new Button("snipertower", QuickLoad("snipertower"), 19*32, 0));
-        towerPickerUI.getButtons().add(new Button("normaltower", QuickLoad("normaltower"), 17*32, 0));
-        towerPickerUI.getButtons().add(new Button("normaltower", QuickLoad("normaltower"), 15*32, 0));
+        towerPickerUI.getButtons().add(new Button("snipertower", QuickLoad("snipertower"), 22*32, 32));
+        towerPickerUI.getButtons().add(new Button("normaltower", QuickLoad("normaltower"), 22*32, 96));
+        towerPickerUI.getButtons().add(new Button("machineguntower", QuickLoad("normaltower"), 22*32, 160));
     }
 
     private void updateUI() {
@@ -48,7 +47,7 @@ public class Game {
                     player.setTempTower(new SniperTower(grid.getTile(0, 0), waveManager.getCurrentWave().getEnemyList()));
                 if (towerPickerUI.isButtonClicked("normaltower"))
                     player.setTempTower(new NormalTower(grid.getTile(0, 0), waveManager.getCurrentWave().getEnemyList()));
-                if (towerPickerUI.isButtonClicked("normaltower"))
+                if (towerPickerUI.isButtonClicked("machineguntower"))
                     player.setTempTower(new MachineGunTower(grid.getTile(0, 0), waveManager.getCurrentWave().getEnemyList()));
             }
         }

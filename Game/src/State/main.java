@@ -11,12 +11,9 @@ public class main {
     public static void main(String[] args) {
         BeginSession();
 
-        Game game = new Game();
-
         while(!Display.isCloseRequested()) {
 
             Clock.update();
-
 
             StateManager.update();
 

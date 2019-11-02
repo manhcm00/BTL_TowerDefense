@@ -1,31 +1,49 @@
 package Entity.Enemy;
 
+import Tile.*;
+
 public class WaveManager {
 
     private float timeSinceLastWave, timeBetweenEnemies;
-    private int waveNumber, enemiesPerWave;
-    private Enemy enemyType;
+    private int waveNumber;
+    private Tile startTile;
+    private TileGrid grid;
     private Wave currentWave;
+    private boolean finishedAllWave;
+    public int[][] EnemyStream = {
+            {1, 1, 1, 1, 1},
+            {2, 2, 1, 1, 1},
+            {2, 2, 1, 1, 1},
+            {2, 2, 1, 1, 1, 3},
+            {2, 2, 1, 1, 1, 3},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1},
+            {2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
+            {1, 1, 1, 3, 3, 3},
+            {3, 3, 3, 3, 3},
+            {1, 1, 1, 4},
+    };
+    private int[] numberEnemies = {5, 5, 5, 6, 6, 9, 10, 6, 4, 4};
 
-    public WaveManager(Enemy enemyType , float timeBetweenEnemies, int enemiesPerWave) {
-        this.enemyType = enemyType;
+    public WaveManager(Tile startTile, TileGrid grid , float timeBetweenEnemies) {
+        this.startTile = startTile;
+        this.grid = grid;
         this.timeBetweenEnemies = timeBetweenEnemies;
-        this.enemiesPerWave = enemiesPerWave;
         this.timeSinceLastWave = 0;
         this.waveNumber = 0;
-
         this.currentWave = null;
+        finishedAllWave = false;
         newWave();
     }
 
     public void Update() {
         if (!currentWave.isCompleted())
             currentWave.Update();
+        else if (waveNumber > 9) finishedAllWave = true;
         else newWave();
     }
 
     private void newWave() {
-        currentWave = new Wave(enemyType, timeBetweenEnemies, enemiesPerWave);
+        currentWave = new Wave(startTile, grid, timeBetweenEnemies, EnemyStream[waveNumber], numberEnemies[waveNumber]);
         waveNumber++;
         System.out.println("Beginning wave " + waveNumber);
     }

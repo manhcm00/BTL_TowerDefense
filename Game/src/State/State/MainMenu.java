@@ -16,7 +16,7 @@ public class MainMenu {
     private UI menuUI;
 
     public MainMenu() {
-        background = QuickLoad("menu");
+        background = QuickLoad("gameOver");
         menuUI = new UI();
         setup();
     }

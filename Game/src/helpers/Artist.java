@@ -15,7 +15,7 @@ import org.newdawn.slick.util.ResourceLoader;
 
 public class Artist {
 
-	public static final int  WIDTH = 640 , HEIGHT = 480;
+	public static final int  WIDTH = 768 , HEIGHT = 480;
 	
 	public static void BeginSession() {
 		Display.setTitle("TowerDefense");

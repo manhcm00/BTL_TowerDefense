@@ -4,6 +4,8 @@ import Entity.Enemy.Enemies.BossEnemy;
 import Entity.Enemy.Enemies.NormalEnemy;
 import Entity.Enemy.Enemies.SmallerEnemy;
 import Entity.Enemy.Enemies.TankerEnemy;
+import Tile.*;
+import org.lwjgl.Sys;
 
 import java.util.ArrayList;
 
@@ -13,29 +15,37 @@ import static helpers.Clock.Delta;
 public class Wave {
 
     private float timeSinceLastSpawn , spawnTime;
-    private Enemy enemyType;
+    private Tile startTile;
+    private TileGrid grid;
     private ArrayList<Enemy>	enemyList;
-    private int  enemiesPerWave;
     private boolean waveCompleted;
+    private int numberOfEnemies;
+    private int current;
+    private int[] enemyQueue;
 
-    public Wave(Enemy enemyType, float spawnTime, int enemiesPerWave) {
-        this.enemyType = enemyType;
+    public Wave(Tile startTile, TileGrid grid, float spawnTime, int[] enemyQueue, int numberEnemies) {
+        this.startTile = startTile;
+        this.grid = grid;
         this.spawnTime = spawnTime;
-        this.enemiesPerWave = enemiesPerWave;
+        this.enemyQueue = enemyQueue;
         this.timeSinceLastSpawn = 0;
+        this.numberOfEnemies = numberEnemies;
         this.enemyList = new ArrayList<Enemy>() ;
         this.waveCompleted = false;
+        this.current = 1;
 
         Spawn();
     }
 
     public void Update() {
         boolean allEnemiesDead = true;
-        if (enemyList.size() < enemiesPerWave) {
+        if (current < numberOfEnemies ) {
             timeSinceLastSpawn += Delta();
             if (timeSinceLastSpawn > spawnTime) {
                 Spawn();
                 timeSinceLastSpawn = 0;
+                current++;
+                System.out.println(enemyList.size());
             }
         }
 
@@ -46,8 +56,8 @@ public class Wave {
                 e.Draw();
             }
             else {
-                if (enemyList.size() > 1)
-                    enemyList.remove(e);
+                /*if (enemyList.size() > 1)
+                    enemyList.remove(e);*/
             }
         }
         if (allEnemiesDead) {
@@ -56,7 +66,15 @@ public class Wave {
     }
 
     private void Spawn() {
-        enemyList.add(new SmallerEnemy(enemyType.getStartTile() , enemyType.getGrid() ,  32 , 32));
+        System.out.println("printed");
+        if (enemyQueue[current] == 1)
+            enemyList.add(new NormalEnemy(startTile , grid ,  32 , 32));
+        if (enemyQueue[current] == 2)
+            enemyList.add(new SmallerEnemy(startTile , grid ,  32 , 32));
+        if (enemyQueue[current] == 3)
+            enemyList.add(new TankerEnemy(startTile , grid ,  32 , 32));
+        if (enemyQueue[current] == 4)
+            enemyList.add(new BossEnemy(startTile , grid ,  32 , 32));
     }
 
     public boolean isCompleted() {
