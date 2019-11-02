@@ -9,6 +9,7 @@ import Tile.Tile;
 import Tile.TileGrid;
 import Tile.TileType;
 import helpers.Clock;
+import helpers.StateManager;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
@@ -118,7 +119,10 @@ public class Player {
 	 	credits += amount;
 	 }
 	 
-	 public static void isAttack(int damage) {health -= damage;}
+	 public static void isAttack(int damage) {
+	 	health -= damage;
+	 	if (health <= 0) StateManager.setState(StateManager.GameState.AFTERGAME);;
+	 }
 
 	public BasicTower getTempTower() {
 		return tempTower;
