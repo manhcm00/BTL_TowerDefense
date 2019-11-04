@@ -1,8 +1,4 @@
-package helpers;
-
-import State.State.AfterGame;
-import State.State.Game;
-import State.State.MainMenu;
+package State.State;
 
 public class StateManager {
     public static enum GameState {
@@ -12,6 +8,7 @@ public class StateManager {
     public static MainMenu mainMenu;
     public static Game game;
     public static AfterGame afterGame;
+    private static boolean restarted = false;
 
     public static void update() {
         switch (gameState) {
@@ -28,7 +25,10 @@ public class StateManager {
             case AFTERGAME:
                 if (afterGame == null)
                     afterGame = new AfterGame();
-                game = new Game();
+                if (restarted == false) {
+                    game = new Game();
+                    restarted = true;
+                }
                 afterGame.update();
                 break;
         }
@@ -36,5 +36,13 @@ public class StateManager {
 
     public static void setState(GameState newState) {
         gameState = newState;
+    }
+
+    public static boolean isRestarted() {
+        return restarted;
+    }
+
+    public static void setRestarted(boolean restarted) {
+        StateManager.restarted = restarted;
     }
 }

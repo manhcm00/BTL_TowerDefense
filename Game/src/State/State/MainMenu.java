@@ -1,11 +1,8 @@
 package State.State;
 
 import UI.UI;
-import helpers.StateManager;
 import org.lwjgl.input.Mouse;
 import org.newdawn.slick.opengl.Texture;
-
-import java.awt.*;
 
 import static helpers.Artist.*;
 import UI.Button;

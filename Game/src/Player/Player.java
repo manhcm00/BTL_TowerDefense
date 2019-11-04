@@ -2,14 +2,11 @@ package Player;
 
 import Entity.Enemy.WaveManager;
 import Entity.Tower.BasicTower;
-import Entity.Tower.MachineGunTower;
-import Entity.Tower.NormalTower;
-import Entity.Tower.SniperTower;
+import State.State.StateManager;
 import Tile.Tile;
 import Tile.TileGrid;
 import Tile.TileType;
 import helpers.Clock;
-import helpers.StateManager;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
@@ -33,7 +30,7 @@ public class Player {
 	 private BasicTower tempTower;
 
 
-	private static final int STARTINGCREDITS = 200;
+	private static final int STARTINGCREDITS = 20000;
 	private static final int STARTINGHEALTH = 5;
 	 
 	 
@@ -121,7 +118,10 @@ public class Player {
 	 
 	 public static void isAttack(int damage) {
 	 	health -= damage;
-	 	if (health <= 0) StateManager.setState(StateManager.GameState.AFTERGAME);;
+	 	if (health <= 0) {
+            StateManager.setState(StateManager.GameState.AFTERGAME);
+            StateManager.setRestarted(false);
+        }
 	 }
 
 	public BasicTower getTempTower() {

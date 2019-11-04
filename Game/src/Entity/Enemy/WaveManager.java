@@ -1,5 +1,6 @@
 package Entity.Enemy;
 
+import State.State.StateManager;
 import Tile.*;
 
 public class WaveManager {
@@ -22,7 +23,8 @@ public class WaveManager {
             {3, 3, 3, 3, 3},
             {1, 1, 1, 4},
     };
-    private int[] numberEnemies = {5, 5, 5, 6, 6, 9, 10, 6, 4, 4};
+    private int[] numberEnemies = {5, 5, 5, 6, 6, 9, 10, 6, 5, 4};
+    private int numberOfWave = 10;
 
     public WaveManager(Tile startTile, TileGrid grid , float timeBetweenEnemies) {
         this.startTile = startTile;
@@ -38,7 +40,11 @@ public class WaveManager {
     public void Update() {
         if (!currentWave.isCompleted())
             currentWave.Update();
-        else if (waveNumber > 9) finishedAllWave = true;
+        else if (waveNumber > numberOfWave - 1) {
+            finishedAllWave = true;
+            StateManager.setState(StateManager.GameState.AFTERGAME);
+            StateManager.setRestarted(false);
+        }
         else newWave();
     }
 

@@ -45,7 +45,6 @@ public class Wave {
                 Spawn();
                 timeSinceLastSpawn = 0;
                 current++;
-                System.out.println(enemyList.size());
             }
         }
 
@@ -66,7 +65,6 @@ public class Wave {
     }
 
     private void Spawn() {
-        System.out.println("printed");
         if (enemyQueue[current] == 1)
             enemyList.add(new NormalEnemy(startTile , grid ,  32 , 32));
         if (enemyQueue[current] == 2)

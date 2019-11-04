@@ -1,7 +1,6 @@
 package State.State;
 
 import UI.*;
-import helpers.StateManager;
 import org.lwjgl.input.Mouse;
 import org.newdawn.slick.opengl.Texture;
 

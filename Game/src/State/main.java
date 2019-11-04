@@ -1,8 +1,7 @@
 package State;
 
-import State.State.Game;
+import State.State.StateManager;
 import helpers.Clock;
-import helpers.StateManager;
 import org.lwjgl.opengl.Display;
 
 import static helpers.Artist.BeginSession;

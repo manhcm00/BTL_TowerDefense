@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/State/State/AfterGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/State/State/StateManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Wave.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Wave.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/WaveManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/WaveManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/helpers/StateManager$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager$GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/helpers/StateManager$GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/helpers/StateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/AfterGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/AfterGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager$GameState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/helpers/StateManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Wave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/WaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/WaveManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/StateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/StateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/AfterGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/AfterGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/StateManager.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,6 +149,8 @@
       <workItem from="1572593747278" duration="13184000" />
       <workItem from="1572626496486" duration="2349000" />
       <workItem from="1572664933448" duration="7759000" />
+      <workItem from="1572836790168" duration="1788000" />
+      <workItem from="1572884967314" duration="2247000" />
     </task>
     <servers />
   </component>
