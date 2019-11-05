@@ -132,4 +132,8 @@ public class Player {
 		this.tempTower = tempTower;
 		holdingTower = true;
 	}
+
+	public static int getHealth() {
+		return health;
+	}
 }

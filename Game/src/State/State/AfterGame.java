@@ -11,20 +11,20 @@ public class AfterGame {
     private UI menuUI;
 
     public AfterGame() {
-        background = QuickLoad("gameOver");
+        background = QuickLoad("background");
         menuUI = new UI();
         setup();
     }
 
     private void setup() {
-        menuUI.getButtons().add(new Button("Play", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 -50));
+        menuUI.getButtons().add(new Button("Play Again", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 -50));
         menuUI.getButtons().add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 + 50));
     }
 
     private void updateButton() {
         if (Mouse.isButtonDown(0)) {
             System.out.println(Mouse.getX() + " " + Mouse.getY());
-            if (menuUI.isButtonClicked("Play")) {
+            if (menuUI.isButtonClicked("Play Again")) {
 
                 StateManager.setState(StateManager.GameState.GAME);
                 System.out.println("Play is clicked");

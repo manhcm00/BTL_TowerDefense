@@ -13,7 +13,7 @@ public class MainMenu {
     private UI menuUI;
 
     public MainMenu() {
-        background = QuickLoad("gameOver");
+        background = QuickLoad("background");
         menuUI = new UI();
         setup();
     }

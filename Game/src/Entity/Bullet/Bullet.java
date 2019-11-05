@@ -18,6 +18,7 @@ public abstract class Bullet implements Entity {
     protected float xVloctity, yVloctity;
     protected float xDest , yDest;
     protected boolean arrivedAtTarget;
+    protected boolean outOfScreen;
 
 
     public Bullet(Enemy target, BasicTower tower) {
@@ -31,6 +32,7 @@ public abstract class Bullet implements Entity {
         yVloctity = 0f;
         calculateDirection();
         arrivedAtTarget = false;
+        outOfScreen = false;
     }
 
     private void calculateDirection() {
@@ -51,6 +53,9 @@ public abstract class Bullet implements Entity {
             y += yVloctity * Delta() * speed;
             Draw();
         }
+        if (!(x >= 0 && x <= 640 && y >=0 && y <= 480)) {
+            this.outOfScreen = true;
+        }
     }
 
     public void Draw() {
@@ -65,6 +70,13 @@ public abstract class Bullet implements Entity {
         this.arrivedAtTarget = arrivedAtTarget;
     }
 
+    public boolean isOutOfScreen() {
+        return outOfScreen;
+    }
+
+    public void setOutOfScreen(boolean outOfScreen) {
+        this.outOfScreen = outOfScreen;
+    }
 
     @Override
     public float getX() {
@@ -85,4 +97,6 @@ public abstract class Bullet implements Entity {
     public void setY(float y) {
 
     }
+
+
 }

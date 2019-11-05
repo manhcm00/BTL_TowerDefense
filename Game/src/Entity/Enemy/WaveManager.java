@@ -1,5 +1,6 @@
 package Entity.Enemy;
 
+import Player.Player;
 import State.State.StateManager;
 import Tile.*;
 
@@ -52,6 +53,7 @@ public class WaveManager {
         currentWave = new Wave(startTile, grid, timeBetweenEnemies, EnemyStream[waveNumber], numberEnemies[waveNumber]);
         waveNumber++;
         System.out.println("Beginning wave " + waveNumber);
+        System.out.println("Player health " + Player.getHealth());
     }
 
     public Wave getCurrentWave() {

@@ -26,6 +26,7 @@ public class SniperTower extends BasicTower {
         if(!projectiles.isEmpty() && distance(getTarget()) < this.range) {
             for (Bullet p : projectiles) {
                 if (p.isArrivedAtTarget()) projectiles.remove(p);
+                if (p.isOutOfScreen()) projectiles.remove(p);
             }
         }
     }
