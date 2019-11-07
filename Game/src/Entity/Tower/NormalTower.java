@@ -16,8 +16,10 @@ public class NormalTower extends BasicTower {
         super(NormalTowerTexture, startTile, enemies);
         this.damage = DAMAGE;
         this.firingSpeed = FIRINGSPEED;
-        this.buyingCost = BUYINGCOST;
+        buyingCost = BUYINGCOST;
+        refundPrize = REFUNDPRIZE;
         this.range = RANGE;
+        upgradePrize = UPGRADEPRIZE;
     }
 
     protected void shoot() {
@@ -32,9 +34,11 @@ public class NormalTower extends BasicTower {
         }
     }
 
-    public static Texture NormalTowerTexture = QuickLoad("normaltower");
+    private static Texture NormalTowerTexture = QuickLoad("normaltower");
     private static final int DAMAGE = 2;
     private static final float FIRINGSPEED = 30;
-    public static final int BUYINGCOST = 50;
+    private static final int BUYINGCOST = 50;
     private static final float RANGE = 160;
+    private static final int REFUNDPRIZE = 20;
+    private static final int UPGRADEPRIZE = 25;
 }

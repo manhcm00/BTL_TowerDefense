@@ -3,6 +3,7 @@ package Entity.Tower;
 import Entity.Bullet.Bullet;
 import Entity.Enemy.Enemy;
 import Entity.Entity;
+import Player.Player;
 import Tile.Tile;
 import org.newdawn.slick.opengl.Texture;
 
@@ -20,13 +21,14 @@ public abstract class BasicTower implements Entity {
     protected int width;
     protected int height;
     protected int damage;
+    protected int level;
     protected Texture basicTexture;
     protected Tile startTile;
     protected ArrayList<Bullet> projectiles;
     protected ArrayList<Enemy> enemies;
     protected Enemy target;
     protected float range;
-    public static int buyingCost;
+    protected static int buyingCost, refundPrize, upgradePrize;
 
     public BasicTower(Texture basicTexture, Tile startTile, ArrayList<Enemy> enemies) {
         this.basicTexture = basicTexture;
@@ -40,6 +42,7 @@ public abstract class BasicTower implements Entity {
         this.enemies = enemies;
         this.target = getTarget();
         this.angle = calculateAngle();
+        this.level = 1;
     }
 
     protected float distance(Enemy enemy) {
@@ -85,6 +88,14 @@ public abstract class BasicTower implements Entity {
         drawQuadTexRot(basicTexture, x, y, width, height, angle);
     }
 
+    public void upgrade() {
+        if (level < 3 && Player.getCredits() >= upgradePrize) {
+            this.damage *= 1.5;
+            this.range *= 1.2;
+            Player.addCredits(-upgradePrize);
+        }
+    }
+
     public float getX() {
         return x;
     }
@@ -116,5 +127,29 @@ public abstract class BasicTower implements Entity {
 
     public void setBuyingCost(int buyingCost) {
         this.buyingCost = buyingCost;
+    }
+
+    public static int getRefundPrize() {
+        return refundPrize;
+    }
+
+    public static void setRefundPrize(int refundPrize) {
+        BasicTower.refundPrize = refundPrize;
+    }
+
+    public static int getUpgradePrize() {
+        return upgradePrize;
+    }
+
+    public static void setUpgradePrize(int upgradePrize) {
+        BasicTower.upgradePrize = upgradePrize;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
     }
 }

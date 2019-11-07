@@ -7,6 +7,7 @@ import Tile.Tile;
 import Tile.TileGrid;
 import Tile.TileType;
 import helpers.Clock;
+import org.lwjgl.Sys;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
@@ -27,10 +28,12 @@ public class Player {
 	 private boolean leftMouseButtonDown;
 	 private boolean rightMouseButtonDown;
 	 private boolean holdingTower;
+	 private boolean holdingUpgrade;
+	 private boolean holdingRefund;
 	 private BasicTower tempTower;
 
 
-	private static final int STARTINGCREDITS = 20000;
+	private static final int STARTINGCREDITS = 200;
 	private static final int STARTINGHEALTH = 5;
 	 
 	 
@@ -48,6 +51,8 @@ public class Player {
 		 this.health = STARTINGHEALTH;
 		 this.credits = STARTINGCREDITS;
 		 this.holdingTower = false;
+		 this.holdingUpgrade = false;
+		 this.holdingRefund = false;
 		 this.tempTower = null;
 	 }
 	 
@@ -57,15 +62,12 @@ public class Player {
 	 
 	 public void Update() {
 
-	 	if (holdingTower) {
-	 		this.tempTower.setX(getMouseTile().getX());
-	 		this.tempTower.setY(getMouseTile().getY());
-	 		tempTower.Draw();
-		}
-
+	 	 whenHoding();
 
 		 if(Mouse.isButtonDown(0) && !leftMouseButtonDown) {
 		 	placeTower();
+		 	refundTower();
+		 	upgradeTower();
 		 }
 
 		 for(BasicTower t : towerList){
@@ -93,19 +95,66 @@ public class Player {
 		 }
 	 }
 
+	 private void whenHoding() {
+		 if (holdingTower) {
+			 this.tempTower.setX(getMouseTile().getX());
+			 this.tempTower.setY(getMouseTile().getY());
+			 tempTower.Draw();
+		 }
+
+		 if (holdingUpgrade) {
+			 drawQuadTex(QuickLoad("snipertower"),
+					 getMouseTile().getX(), getMouseTile().getY(),
+					 QuickLoad("snipertower").getImageWidth(),
+					 QuickLoad("snipertower").getImageHeight());
+		 }
+
+		 if (holdingRefund) {
+			 drawQuadTex(QuickLoad("snipertower"),
+					 getMouseTile().getX(), getMouseTile().getY(),
+					 QuickLoad("snipertower").getImageWidth(),
+					 QuickLoad("snipertower").getImageHeight());
+		 }
+	 }
+
 	 private void placeTower() {
 	 	if (holdingTower) {
 			if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TileType.Sand
 					&& !grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).isSolic()
-					&& this.credits >= tempTower.getBuyingCost()) {
+					&& credits >= tempTower.getBuyingCost()) {
 				towerList.add(tempTower);
+				grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).setTower(tempTower);
 				grid.getTile(Mouse.getX() / 32, (HEIGHT - Mouse.getY() - 1) / 32).setSolic(true);
-				this.credits -= BasicTower.buyingCost;
+				credits -= tempTower.getBuyingCost();
 			}
 			holdingTower = false;
 			tempTower = null;
 			System.out.println(credits);
 		}
+	 }
+
+	 private void refundTower() {
+	 	if (holdingRefund) {
+	 		BasicTower pickingTower = grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getTower();
+	 		if (pickingTower != null) {
+	 			towerList.remove(pickingTower);
+				credits = credits + pickingTower.getRefundPrize();
+				grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).setTower(null);
+				grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).setSolic(false);
+				System.out.println(credits);
+			}
+		}
+		 holdingRefund = false;
+	 }
+
+
+	 private void upgradeTower() {
+	 	if (holdingUpgrade) {
+	 		BasicTower pickingTower = grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getTower();
+	 		pickingTower.upgrade();
+			System.out.println(credits);
+		}
+		holdingUpgrade = false;
 	 }
 
 	 private Tile getMouseTile() {
@@ -133,7 +182,31 @@ public class Player {
 		holdingTower = true;
 	}
 
+	public boolean isHoldingUpgrade() {
+		return holdingUpgrade;
+	}
+
+	public void setHoldingUpgrade(boolean holdingUpgrade) {
+		this.holdingUpgrade = holdingUpgrade;
+	}
+
+	public boolean isHoldingRefund() {
+		return holdingRefund;
+	}
+
+	public void setHoldingRefund(boolean holdingRefund) {
+		this.holdingRefund = holdingRefund;
+	}
+
 	public static int getHealth() {
 		return health;
+	}
+
+	public static int getCredits() {
+		return credits;
+	}
+
+	public static void setCredits(int credits) {
+		Player.credits = credits;
 	}
 }

@@ -26,6 +26,7 @@ public abstract class Bullet implements Entity {
         this.y = tower.getY() + Game.TILE_SIZE / 2 - 3;
         this.target = target;
         this.tower = tower;
+        this.damage = tower.getDamage();
         xDest = target.getX();
         yDest = target.getY();
         xVloctity = 0f;

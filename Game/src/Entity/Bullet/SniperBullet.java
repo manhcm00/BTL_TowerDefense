@@ -9,7 +9,6 @@ public class SniperBullet extends Bullet {
     public SniperBullet(Enemy target, BasicTower tower) {
         super(target, tower);
         this.texture = QuickLoad("bullet");
-        this.damage = 10;
         this.speed = 100;
     }
 }

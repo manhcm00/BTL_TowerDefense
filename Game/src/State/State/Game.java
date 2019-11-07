@@ -1,9 +1,5 @@
 package State.State;
 
-import Entity.Enemy.Enemies.BossEnemy;
-import Entity.Enemy.Enemies.NormalEnemy;
-import Entity.Enemy.Enemies.TankerEnemy;
-import Entity.Enemy.Enemy;
 import Entity.Enemy.WaveManager;
 import Entity.Tower.MachineGunTower;
 import Entity.Tower.NormalTower;
@@ -22,7 +18,7 @@ public class Game {
     private Player player;
     private WaveManager waveManager;
     public static final int TILE_SIZE = 32;
-    private UI towerPickerUI;
+    private UI buttons;
 
     public Game() {
         grid = new TileGrid(NormalMap.map);
@@ -32,23 +28,30 @@ public class Game {
     }
 
     private void setup() {
-        towerPickerUI = new UI();
-        towerPickerUI.getButtons().add(new Button("snipertower", QuickLoad("snipertower"), 22*32, 32));
-        towerPickerUI.getButtons().add(new Button("normaltower", QuickLoad("normaltower"), 22*32, 96));
-        towerPickerUI.getButtons().add(new Button("machineguntower", QuickLoad("normaltower"), 22*32, 160));
+        buttons = new UI();
+        buttons.getButtons().add(new Button("snipertower", QuickLoad("snipertower"), 22*32, 32));
+        buttons.getButtons().add(new Button("normaltower", QuickLoad("normaltower"), 22*32, 96));
+        buttons.getButtons().add(new Button("machineguntower", QuickLoad("normaltower"), 22*32, 160));
+        buttons.getButtons().add(new Button("upgrade", QuickLoad("snipertower"), 22*32, 280));
+        buttons.getButtons().add(new Button("refund", QuickLoad("snipertower"), 22*32, 360));
+
     }
 
     private void updateUI() {
-        towerPickerUI.draw();
+        buttons.draw();
         if (Mouse.next()) {
             boolean MouseClicked = Mouse.isButtonDown(0);
             if (MouseClicked) {
-                if (towerPickerUI.isButtonClicked("snipertower"))
+                if (buttons.isButtonClicked("snipertower"))
                     player.setTempTower(new SniperTower(grid.getTile(0, 0), waveManager.getCurrentWave().getEnemyList()));
-                if (towerPickerUI.isButtonClicked("normaltower"))
+                if (buttons.isButtonClicked("normaltower"))
                     player.setTempTower(new NormalTower(grid.getTile(0, 0), waveManager.getCurrentWave().getEnemyList()));
-                if (towerPickerUI.isButtonClicked("machineguntower"))
+                if (buttons.isButtonClicked("machineguntower"))
                     player.setTempTower(new MachineGunTower(grid.getTile(0, 0), waveManager.getCurrentWave().getEnemyList()));
+                if(buttons.isButtonClicked("upgrade"))
+                    player.setHoldingUpgrade(true);
+                if(buttons.isButtonClicked("refund"))
+                    player.setHoldingRefund(true);
             }
         }
     }

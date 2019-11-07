@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="" />
+    <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Tile/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/MachineGunBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/MachineGunBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/NormalBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/NormalBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/SniperBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/SniperBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Tile.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java-tower-defense-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -34,8 +54,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -132,7 +152,8 @@
       <workItem from="1572664933448" duration="7759000" />
       <workItem from="1572836790168" duration="1788000" />
       <workItem from="1572884967314" duration="7328000" />
-      <workItem from="1572999065562" duration="56000" />
+      <workItem from="1572999065562" duration="648000" />
+      <workItem from="1573057610163" duration="4555000" />
     </task>
     <servers />
   </component>

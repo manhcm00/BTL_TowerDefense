@@ -16,8 +16,10 @@ public class MachineGunTower extends BasicTower {
         super(NormalTowerTexture, startTile, enemies);
         this.damage = DAMAGE;
         this.firingSpeed = FIRINGSPEED;
-        this.buyingCost = BUYINGCOST;
+        buyingCost = BUYINGCOST;
         this.range = RANGE;
+        refundPrize = REFUNDPRIZE;
+        upgradePrize = UPGRADEPRIZE;
     }
 
     protected void shoot() {
@@ -37,4 +39,6 @@ public class MachineGunTower extends BasicTower {
     private static final float FIRINGSPEED = 10;
     public static final int BUYINGCOST = 50;
     private static final float RANGE = 80;
+    private static final int REFUNDPRIZE = 20;
+    private static final int UPGRADEPRIZE = 25;
 }

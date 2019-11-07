@@ -9,7 +9,6 @@ public class MachineGunBullet extends Bullet {
     public MachineGunBullet(Enemy target, BasicTower tower) {
         super(target, tower);
         this.texture = QuickLoad("bullet");
-        this.damage = 1.5f;
         this.speed = 100;
     }
 }

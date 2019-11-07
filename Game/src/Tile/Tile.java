@@ -1,5 +1,6 @@
 package Tile;
 
+import Entity.Tower.BasicTower;
 import org.newdawn.slick.opengl.Texture;
 import static helpers.Artist.*;
 
@@ -10,6 +11,7 @@ public class Tile {
     private Texture texture;
     private TileType type;
     private boolean solic;
+    private BasicTower tower;
 
 
 
@@ -21,6 +23,7 @@ public class Tile {
         this.type = type;
         this.texture = QuickLoad(type.textureName);
         this.solic = false;
+        this.tower = null;
     }
 
     public void Draw() {
@@ -39,7 +42,13 @@ public class Tile {
         return x;
     }
 
+    public BasicTower getTower() {
+        return tower;
+    }
 
+    public void setTower(BasicTower tower) {
+        this.tower = tower;
+    }
 
     public void setX(float x) {
         this.x = x;

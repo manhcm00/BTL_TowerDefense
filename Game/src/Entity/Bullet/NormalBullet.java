@@ -10,7 +10,6 @@ public class NormalBullet extends Bullet {
     public NormalBullet(Enemy target, BasicTower tower) {
         super(target, tower);
         this.texture = QuickLoad("bullet");
-        this.damage = 2;
         this.speed = 100;
     }
 }
