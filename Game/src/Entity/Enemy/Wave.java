@@ -55,8 +55,7 @@ public class Wave {
                 e.Draw();
             }
             else {
-                /*if (enemyList.size() > 1)
-                    enemyList.remove(e);*/
+                //enemyList.remove(e);
             }
         }
         if (allEnemiesDead) {

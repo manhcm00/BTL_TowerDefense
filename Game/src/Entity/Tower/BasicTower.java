@@ -86,12 +86,21 @@ public abstract class BasicTower implements Entity {
     public void Draw() {
         //drawQuadTex(baseTexture, x , y , width , height);
         drawQuadTexRot(basicTexture, x, y, width, height, angle);
+        if(level == 2) {
+            drawQuadTex(QuickLoad("UpgradeLevel") , x + 13 , y + 32 , 5 ,5);
+        }
+        if(level == 3) {
+            drawQuadTex(QuickLoad("UpgradeLevel") , x + 10 , y + 32 , 5 ,5);
+            drawQuadTex(QuickLoad("UpgradeLevel") , x + 17 , y + 32  , 5 ,5);
+        }
     }
 
     public void upgrade() {
         if (level < 3 && Player.getCredits() >= upgradePrize) {
             this.damage *= 1.5;
             this.range *= 1.2;
+            this.firingSpeed *= 0.8;
+            this.level ++;
             Player.addCredits(-upgradePrize);
         }
     }

@@ -33,7 +33,7 @@ public class Player {
 	 private BasicTower tempTower;
 
 
-	private static final int STARTINGCREDITS = 200;
+	private static final int STARTINGCREDITS = 1000;
 	private static final int STARTINGHEALTH = 5;
 	 
 	 
@@ -87,7 +87,15 @@ public class Player {
 			 }
 		 }
 	 }
-	 
+
+	 public String healthString() {
+	 	return "Health : " + Integer.toString(health);
+	 }
+
+	 public String creditsString() {
+	 	return "Credits : " + Integer.toString(credits);
+	 }
+
 	 public void MoveIndex() {
 		 index ++;
 		 if(index > types.length - 1 ) {
@@ -103,17 +111,17 @@ public class Player {
 		 }
 
 		 if (holdingUpgrade) {
-			 drawQuadTex(QuickLoad("snipertower"),
+			 drawQuadTex(QuickLoad("UpgradeButtonGraphic"),
 					 getMouseTile().getX(), getMouseTile().getY(),
-					 QuickLoad("snipertower").getImageWidth(),
-					 QuickLoad("snipertower").getImageHeight());
+					 QuickLoad("UpgradeButtonGraphic").getImageWidth(),
+					 QuickLoad("UpgradeButtonGraphic").getImageHeight());
 		 }
 
 		 if (holdingRefund) {
-			 drawQuadTex(QuickLoad("snipertower"),
+			 drawQuadTex(QuickLoad("SellButtonGraphic"),
 					 getMouseTile().getX(), getMouseTile().getY(),
-					 QuickLoad("snipertower").getImageWidth(),
-					 QuickLoad("snipertower").getImageHeight());
+					 QuickLoad("SellButtonGraphic").getImageWidth(),
+					 QuickLoad("SellButtonGraphic").getImageHeight());
 		 }
 	 }
 

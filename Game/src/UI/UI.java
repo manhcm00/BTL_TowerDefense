@@ -1,8 +1,10 @@
 package UI;
 
 import org.lwjgl.input.Mouse;
+import org.newdawn.slick.TrueTypeFont;
 import org.newdawn.slick.opengl.Texture;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 import static helpers.Artist.*;
@@ -10,12 +12,19 @@ import static helpers.Artist.*;
 public class UI {
     private ArrayList<Button> buttons;
     private UI mainUI;
+    private TrueTypeFont font;
+    private Font awtFont;
+
 
     public UI() {
         buttons = new ArrayList<Button>();
-
+        awtFont = new Font("Times New Roman" , Font.BOLD , 20);
+        font = new TrueTypeFont(awtFont , false);
     }
 
+    public void drawInfo(int x , int y , String s) {
+        font.drawString(x , y , s);
+    }
     public boolean isButtonClicked(String buttonName) {
         Button b = getButton(buttonName);
         float mouseY= HEIGHT - Mouse.getY() - 1;

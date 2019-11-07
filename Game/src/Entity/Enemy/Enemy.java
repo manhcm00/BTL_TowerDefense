@@ -77,8 +77,6 @@ public abstract class Enemy implements Entity {
         }
     }
 
-
-
     private void PopulateCheckPointList() {
 
         checkpoints.add(FindNextC(startTile , directions = FindNextD(startTile)));

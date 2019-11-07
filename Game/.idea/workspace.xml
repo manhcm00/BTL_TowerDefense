@@ -2,25 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/res/SellButtonGraphic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/UpgradeButtonGraphic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/UpgradeLevel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Wave.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Wave.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Player/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/State/State/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Tile/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/MachineGunBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/MachineGunBullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/NormalBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/NormalBullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/SniperBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/SniperBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/UI/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/UI/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/helpers/Clock.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/helpers/Clock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Wave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State/State/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Clock.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +42,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1SdBWRAfdPTSEe3OY8YIART2CBd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -58,15 +62,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="State.State" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Downloads\eclipse-workspace\eclipse-workspace\Game\src\res" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Entity.Bullet" />
       <recent name="Entity.Enemy" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Downloads\eclipse-workspace\eclipse-workspace\Game\src\res" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="State.State" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +157,7 @@
       <workItem from="1572836790168" duration="1788000" />
       <workItem from="1572884967314" duration="7328000" />
       <workItem from="1572999065562" duration="648000" />
-      <workItem from="1573057610163" duration="4555000" />
+      <workItem from="1573057610163" duration="12259000" />
     </task>
     <servers />
   </component>
@@ -172,5 +176,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

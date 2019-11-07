@@ -32,13 +32,15 @@ public class Game {
         buttons.getButtons().add(new Button("snipertower", QuickLoad("snipertower"), 22*32, 32));
         buttons.getButtons().add(new Button("normaltower", QuickLoad("normaltower"), 22*32, 96));
         buttons.getButtons().add(new Button("machineguntower", QuickLoad("normaltower"), 22*32, 160));
-        buttons.getButtons().add(new Button("upgrade", QuickLoad("snipertower"), 22*32, 280));
-        buttons.getButtons().add(new Button("refund", QuickLoad("snipertower"), 22*32, 360));
+        buttons.getButtons().add(new Button("upgrade", QuickLoad("UpgradeButtonGraphic"), 22*32, 280));
+        buttons.getButtons().add(new Button("refund", QuickLoad("SellButtonGraphic"), 22*32, 360));
 
     }
 
     private void updateUI() {
         buttons.draw();
+        buttons.drawInfo(520 , 0 , player.healthString());
+        buttons.drawInfo(520 , 20 , player.creditsString());
         if (Mouse.next()) {
             boolean MouseClicked = Mouse.isButtonDown(0);
             if (MouseClicked) {
