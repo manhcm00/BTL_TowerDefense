@@ -18,7 +18,7 @@ public class UI {
 
     public UI() {
         buttons = new ArrayList<Button>();
-        awtFont = new Font("Times New Roman" , Font.BOLD , 20);
+        awtFont = new Font("Consolas" , Font.BOLD , 16);
         font = new TrueTypeFont(awtFont , false);
     }
 

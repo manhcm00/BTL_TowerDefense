@@ -34,7 +34,7 @@ public class MachineGunTower extends BasicTower {
         }
     }
 
-    public static Texture NormalTowerTexture = QuickLoad("normaltower");
+    public static Texture NormalTowerTexture = QuickLoad("machineguntower");
     private static final int DAMAGE = 1;
     private static final float FIRINGSPEED = 10;
     public static final int BUYINGCOST = 50;

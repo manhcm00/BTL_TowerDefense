@@ -3,7 +3,7 @@ package Tile;
 public enum TileType {
 
 
-    Grass("grass" , true) , Sand("sand" , false), Rock("rock" , false) , NULL("rock" , false);
+    Mountain("mountain" , true) , Sand("sand" , false), Rock("rock" , false) , NULL("rock" , false);
 
     String textureName;
     boolean buildable;

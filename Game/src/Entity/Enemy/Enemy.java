@@ -23,6 +23,7 @@ public abstract class Enemy implements Entity {
     protected ArrayList<CheckPoint>	checkpoints;
     protected int[] directions;
     protected int reward;
+    private boolean top, down, left, right;
 
     public Enemy(Tile startTile , TileGrid grid  , int width , int height) {
         this.startTile = startTile;
@@ -41,6 +42,10 @@ public abstract class Enemy implements Entity {
         directions = FindNextD(startTile);
         this.currentCheckPoint = 0;
         PopulateCheckPointList();
+        this.top = false;
+        this.right = false;
+        this.left = false;
+        this.down = false;
     }
 
     private CheckPoint FindNextC(Tile s , int dir[]) {
@@ -157,6 +162,14 @@ public abstract class Enemy implements Entity {
         }
     }
 
+    private static int setupdDrection (int x, int y) {
+        if (x > 0 && y == 0) return 0;
+        if (x == 0 && y > 0) return 90;
+        if (x < 0 && y > 0) return  180;
+        if (x == 0 && y < 0) return -90;
+        return 0;
+    }
+
     public boolean isAlive() {
         return alive;
     }
@@ -172,7 +185,7 @@ public abstract class Enemy implements Entity {
     }
 
     public void Draw() {
-        drawQuadTex(texture , x , y , width , height);
+        drawQuadTexRot(texture , x , y , width , height, setupdDrection(checkpoints.get(currentCheckPoint).getxDirection(), checkpoints.get(currentCheckPoint).getyDirection()));
     }
 
     public int getWidth() {

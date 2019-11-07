@@ -12,7 +12,7 @@ public class TileGrid {
         map = new Tile[20][15];
         for(int i = 0; i < map.length ; i++) {
             for(int j = 0 ; j < map[i].length ; j++) {
-                map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Grass);
+                map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Mountain);
             }
         }
     }
@@ -34,7 +34,7 @@ public class TileGrid {
             for(int j = 0 ; j < map[i].length ; j++) {
                 switch(newMap[j][i]) {
                     case 0:
-                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Grass);
+                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Mountain);
                         break;
                     case 1:
                         map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Sand);

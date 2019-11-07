@@ -41,7 +41,7 @@ public class WaveManager {
     public void Update() {
         if (!currentWave.isCompleted())
             currentWave.Update();
-        else if (waveNumber > numberOfWave - 1) {
+        else if (waveNumber >= numberOfWave) {
             finishedAllWave = true;
             StateManager.setState(StateManager.GameState.AFTERGAME);
             StateManager.setRestarted(false);

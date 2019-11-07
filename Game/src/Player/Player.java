@@ -40,7 +40,7 @@ public class Player {
 	 public Player( TileGrid grid, WaveManager waveManager) {
 		 this.grid = grid;
 		 types = new TileType[3];
-		 this.types[0] = TileType.Grass;
+		 this.types[0] = TileType.Mountain;
 		 this.types[1] = TileType.Sand;
 		 this.types[2] = TileType.Rock;
 		 this.index = 0;
@@ -89,11 +89,11 @@ public class Player {
 	 }
 
 	 public String healthString() {
-	 	return "Health : " + Integer.toString(health);
+	 	return "Health: " + Integer.toString(health);
 	 }
 
 	 public String creditsString() {
-	 	return "Credits : " + Integer.toString(credits);
+	 	return "Credits: " + Integer.toString(credits);
 	 }
 
 	 public void MoveIndex() {
@@ -159,8 +159,10 @@ public class Player {
 	 private void upgradeTower() {
 	 	if (holdingUpgrade) {
 	 		BasicTower pickingTower = grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getTower();
-	 		pickingTower.upgrade();
-			System.out.println(credits);
+	 		if(pickingTower != null) {
+				pickingTower.upgrade();
+				System.out.println(credits);
+			}
 		}
 		holdingUpgrade = false;
 	 }

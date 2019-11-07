@@ -58,7 +58,7 @@ public class Wave {
                 //enemyList.remove(e);
             }
         }
-        if (allEnemiesDead) {
+        if (allEnemiesDead && current > numberOfEnemies - 1) {
             waveCompleted = true;
         }
     }
