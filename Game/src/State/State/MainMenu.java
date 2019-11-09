@@ -13,7 +13,7 @@ public class MainMenu {
     private UI menuUI;
 
     public MainMenu() {
-        background = QuickLoad("background");
+        background = QuickLoad("menu");
         menuUI = new UI();
         setup();
     }
@@ -37,7 +37,7 @@ public class MainMenu {
     }
 
     public void update() {
-        drawQuadTex(background, 0, 0, 1080, 512);
+        drawQuadTex(background, -64, 0, 1440, 768);
         updateButton();
         menuUI.draw();
     }

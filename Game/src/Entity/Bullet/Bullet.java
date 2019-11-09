@@ -7,6 +7,7 @@ import State.State.Game;
 import org.newdawn.slick.opengl.Texture;
 
 import static helpers.Artist.drawQuadTex;
+import static helpers.Artist.drawQuadTexRot;
 import static helpers.Clock.Delta;
 
 public abstract class Bullet implements Entity {
@@ -60,7 +61,8 @@ public abstract class Bullet implements Entity {
     }
 
     public void Draw() {
-        drawQuadTex(texture, x, y, 6, 6);
+
+        drawQuadTexRot(texture, x, y, texture.getImageWidth(), texture.getImageHeight(), (float) Math.toDegrees(Math.atan2((double) yVloctity, (double) xVloctity)));
     }
 
     public boolean isArrivedAtTarget() {

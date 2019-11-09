@@ -9,7 +9,7 @@ import static helpers.Artist.QuickLoad;
 public class NormalBullet extends Bullet {
     public NormalBullet(Enemy target, BasicTower tower) {
         super(target, tower);
-        this.texture = QuickLoad("bullet");
-        this.speed = 100;
+        this.texture = QuickLoad("normalBullet");
+        this.speed = 50;
     }
 }

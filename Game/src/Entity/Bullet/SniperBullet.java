@@ -8,7 +8,7 @@ import static helpers.Artist.QuickLoad;
 public class SniperBullet extends Bullet {
     public SniperBullet(Enemy target, BasicTower tower) {
         super(target, tower);
-        this.texture = QuickLoad("bullet");
-        this.speed = 100;
+        this.texture = QuickLoad("sniperBullet");
+        this.speed = 50;
     }
 }

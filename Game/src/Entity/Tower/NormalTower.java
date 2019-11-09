@@ -38,7 +38,7 @@ public class NormalTower extends BasicTower {
     private static final int DAMAGE = 2;
     private static final float FIRINGSPEED = 30;
     private static final int BUYINGCOST = 50;
-    private static final float RANGE = 160;
+    private static final float RANGE = 200;
     private static final int REFUNDPRIZE = 20;
     private static final int UPGRADEPRIZE = 25;
 }

@@ -2,44 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/res/buttonMachine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/buttonNormal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/buttonSniper.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/machineguntower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/mountain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/f75d60a05e6803d8ef1d1acd4dd7f4f2--game-texture-d-texture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/machinegunBullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/normalBullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sniperBullet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Wave.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Wave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/WaveManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/WaveManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Bullet/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Bullet/Bullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Bullet/MachineGunBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Bullet/MachineGunBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Bullet/NormalBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Bullet/NormalBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Bullet/SniperBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Bullet/SniperBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/AfterGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/AfterGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/State/State/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Tile/TileGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/TileGrid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Tile/TileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/TileType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/UI/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/UI/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/res/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/res/bullet.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/res/enemyBoss.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/enemyBoss.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/res/enemyNormal.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/enemyNormal.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/res/enemySmaller.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/enemySmaller.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/res/enemyTanker.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/enemyTanker.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/res/normaltower.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/normaltower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/res/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/rock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/res/snipertower.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/snipertower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Wave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/WaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/WaveManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/res/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/res/mountain.png" beforeDir="false" afterPath="$PROJECT_DIR$/bin/res/mountain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/MachineGunBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/MachineGunBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/NormalBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/NormalBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/SniperBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/SniperBullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/AfterGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/AfterGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State/State/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/TileGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tile/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/bullet.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/enemyBoss.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/enemyBoss.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/enemyNormal.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/enemyNormal.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/enemySmaller.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/enemySmaller.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/enemyTanker.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/enemyTanker.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/normaltower.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/normaltower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/rock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/snipertower.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/snipertower.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/gameOver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/mountain.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/mountain.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +176,10 @@
       <workItem from="1572836790168" duration="1788000" />
       <workItem from="1572884967314" duration="7328000" />
       <workItem from="1572999065562" duration="648000" />
-      <workItem from="1573057610163" duration="20473000" />
+      <workItem from="1573057610163" duration="22588000" />
+      <workItem from="1573210013330" duration="2429000" />
+      <workItem from="1573229065291" duration="2327000" />
+      <workItem from="1573271340526" duration="2267000" />
     </task>
     <servers />
   </component>

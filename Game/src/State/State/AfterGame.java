@@ -11,7 +11,7 @@ public class AfterGame {
     private UI menuUI;
 
     public AfterGame() {
-        background = QuickLoad("background");
+        background = QuickLoad("menu");
         menuUI = new UI();
         setup();
     }
@@ -36,7 +36,7 @@ public class AfterGame {
     }
 
     public void update() {
-        drawQuadTex(background, 0, 0, 1080, 512);
+        drawQuadTex(background, -64, 0, 1440, 768);
         updateButton();
         menuUI.draw();
     }

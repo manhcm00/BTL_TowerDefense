@@ -34,9 +34,9 @@ public class Game {
         buttons.getButtons().add(new Button("snipertower", QuickLoad("buttonSniper"), 21*32, 32));
         buttons.getButtons().add(new Button("normaltower", QuickLoad("buttonNormal"), 21*32, 128));
         buttons.getButtons().add(new Button("machineguntower", QuickLoad("buttonMachine"), 21*32, 224));
-        buttons.getButtons().add(new Button("upgrade", QuickLoad("UpgradeButtonGraphic"), 20*32, 360));
+        buttons.getButtons().add(new Button("upgrade", QuickLoad("UpgradeButtonGraphic"), 22 *32 - 48, 360));
         buttons.getButtons().add(new Button("refund", QuickLoad("SellButtonGraphic"), 22*32, 360));
-        background = QuickLoad("background");
+        background = QuickLoad("menu");
     }
 
     private void updateUI() {
