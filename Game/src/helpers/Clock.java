@@ -54,17 +54,4 @@ public class Clock {
 		if(paused)	paused = false;
 		else paused = true;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

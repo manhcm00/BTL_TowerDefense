@@ -38,9 +38,9 @@ public class AfterGame {
 
     public void update() {
         if (Player.isWin())
-            drawQuadTex(winBackground, -32, 0, 1440, 768);
+            drawQuadTex(winBackground, -64, 0, 1440, 768);
         else
-            drawQuadTex(loseBackground, -32, 0, 1440, 768);
+            drawQuadTex(loseBackground, -64, 0, 1440, 768);
         updateButton();
         menuUI.draw();
     }

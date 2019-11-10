@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/res/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/quit.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Enemies/TankerEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Enemies/TankerEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/State/State/AfterGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/AfterGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/State/State/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Tile/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Tile/TileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Tile/TileType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bullet/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/TankerEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/TankerEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State/State/AfterGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/AfterGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State/State/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/TileGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tile/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tile/TileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Clock.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,15 +55,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Downloads\eclipse-workspace\eclipse-workspace\Game\src\res" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="State.State" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Entity.Bullet" />
       <recent name="Entity.Enemy" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="State.State" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Downloads\eclipse-workspace\eclipse-workspace\Game\src\res" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -163,7 +169,7 @@
       <workItem from="1573229065291" duration="2327000" />
       <workItem from="1573271340526" duration="11633000" />
       <workItem from="1573371849815" duration="1639000" />
-      <workItem from="1573374308318" duration="5988000" />
+      <workItem from="1573374308318" duration="7661000" />
     </task>
     <servers />
   </component>

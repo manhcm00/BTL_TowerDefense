@@ -100,6 +100,4 @@ public abstract class Bullet implements Entity {
     public void setY(float y) {
 
     }
-
-
 }

@@ -22,5 +22,5 @@ public class TankerEnemy extends Enemy {
     private static final int HEALTH = 20;
     private static final int REWARD = 30;
     private static final int DAMAGE = 1;
-    private static final float ARMOR = 5;
+    private static final float ARMOR = 8;
 }
