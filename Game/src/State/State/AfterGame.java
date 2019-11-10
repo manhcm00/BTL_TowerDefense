@@ -19,8 +19,7 @@ public class AfterGame {
     }
 
     private void setup() {
-        menuUI.getButtons().add(new Button("Play Again", QuickLoad("playButton"), WIDTH/2 - 64 - 64, HEIGHT / 2 + 150));
-        menuUI.getButtons().add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 + 64, HEIGHT / 2 + 150));
+        menuUI.getButtons().add(new Button("Play Again", QuickLoad("play"), WIDTH/2 - 32, HEIGHT / 2 + 150));
     }
 
     private void updateButton() {
@@ -33,9 +32,6 @@ public class AfterGame {
                 }
                 StateManager.setState(StateManager.GameState.GAME);
                 System.out.println("Play is clicked");
-            }
-            if (menuUI.isButtonClicked("Quit")) {
-                System.exit(0);
             }
         }
     }

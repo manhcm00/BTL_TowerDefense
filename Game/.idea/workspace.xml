@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/musicStuff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/sound/machine.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/sound/normal.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/sound/sniper.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/sound/start.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/quit.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Enemies/SmallerEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Enemies/SmallerEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/State/State/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/SmallerEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemies/SmallerEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State/State/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/AfterGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/AfterGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/State/State/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/State/State/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/AfterGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/AfterGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State/MainMenu.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +163,7 @@
       <workItem from="1573229065291" duration="2327000" />
       <workItem from="1573271340526" duration="11633000" />
       <workItem from="1573371849815" duration="1639000" />
-      <workItem from="1573374308318" duration="5157000" />
+      <workItem from="1573374308318" duration="5988000" />
     </task>
     <servers />
   </component>
