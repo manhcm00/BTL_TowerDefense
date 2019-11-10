@@ -2,7 +2,6 @@ package Entity.Tower;
 
 import Entity.Bullet.Bullet;
 import Entity.Bullet.MachineGunBullet;
-import Entity.Bullet.SniperBullet;
 import Entity.Enemy.Enemy;
 import Tile.Tile;
 import org.newdawn.slick.opengl.Texture;
@@ -28,17 +27,17 @@ public class MachineGunTower extends BasicTower {
             projectiles.add(new MachineGunBullet(getTarget(), this));
         if(!projectiles.isEmpty() && distance(getTarget()) < this.range) {
             for (Bullet p : projectiles) {
-                if (p.isArrivedAtTarget()) projectiles.remove(p);
+                //if (p.isArrivedAtTarget()) projectiles.remove(p);
                 if (p.isOutOfScreen()) projectiles.remove(p);
             }
         }
     }
 
     public static Texture NormalTowerTexture = QuickLoad("machineguntower");
-    private static final int DAMAGE = 1;
+    private static final float DAMAGE = 0.5f;
     private static final float FIRINGSPEED = 5;
-    public static final int BUYINGCOST = 75;
+    public static final int BUYINGCOST = 150;
     private static final float RANGE = 160;
     private static final int REFUNDPRIZE = 20;
-    private static final int UPGRADEPRIZE = 25;
+    private static final int UPGRADEPRIZE = 75;
 }

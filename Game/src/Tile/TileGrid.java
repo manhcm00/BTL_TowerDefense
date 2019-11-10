@@ -37,7 +37,7 @@ public class TileGrid {
                         map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Mountain);
                         break;
                     case 1:
-                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Sand);
+                        map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Way);
                         break;
                     case 2:
                         map[i][j] = new Tile(i * 32 , j * 32 , 32 , 32 , TileType.Rock);

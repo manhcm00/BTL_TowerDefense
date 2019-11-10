@@ -19,8 +19,8 @@ public class MainMenu {
     }
 
     private void setup() {
-        menuUI.getButtons().add(new Button("Play", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 -50));
-        menuUI.getButtons().add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 - 32, HEIGHT / 2 + 50));
+        menuUI.getButtons().add(new Button("Play", QuickLoad("playButton"), WIDTH/2 -64 - 64, HEIGHT / 2 + 150));
+        menuUI.getButtons().add(new Button("Quit", QuickLoad("playButton"), WIDTH/2 + 64, HEIGHT / 2 + 150));
     }
 
     private void updateButton() {
@@ -37,7 +37,7 @@ public class MainMenu {
     }
 
     public void update() {
-        drawQuadTex(background, -64, 0, 1440, 768);
+        drawQuadTex(background, -32, 0, 1440, 768);
         updateButton();
         menuUI.draw();
     }

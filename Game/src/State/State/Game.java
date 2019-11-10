@@ -42,6 +42,9 @@ public class Game {
     private void updateUI() {
         drawQuadTex(background, 640, 0, 1080, 768);
         buttons.draw();
+        buttons.drawInfo(21*32 + 16, 32 + 64 , "300");
+        buttons.drawInfo(21*32 + 16, 128 + 64 , "100");
+        buttons.drawInfo(21*32 + 16, 224 + 64 , "150");
         buttons.drawInfo(650 , 400 , player.healthString());
         buttons.drawInfo(650 , 420 , player.creditsString());
         if (Mouse.next()) {

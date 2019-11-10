@@ -22,7 +22,7 @@ public class WaveManager {
             {2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
             {1, 1, 1, 3, 3, 3},
             {3, 3, 3, 3, 3},
-            {1, 1, 1, 4},
+            {3, 3, 3, 4},
     };
     private int[] numberEnemies = {5, 5, 5, 6, 6, 9, 10, 6, 5, 4};
     private int numberOfWave = 10;
@@ -42,6 +42,7 @@ public class WaveManager {
         if (!currentWave.isCompleted())
             currentWave.Update();
         else if (waveNumber >= numberOfWave) {
+            Player.setWin(true);
             finishedAllWave = true;
             StateManager.setState(StateManager.GameState.AFTERGAME);
             StateManager.setRestarted(false);

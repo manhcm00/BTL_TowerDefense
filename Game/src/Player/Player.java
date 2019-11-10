@@ -30,10 +30,11 @@ public class Player {
 	 private boolean holdingTower;
 	 private boolean holdingUpgrade;
 	 private boolean holdingRefund;
+	 private static boolean win;
 	 private BasicTower tempTower;
 
 
-	private static final int STARTINGCREDITS = 1000;
+	private static final int STARTINGCREDITS = 200;
 	private static final int STARTINGHEALTH = 5;
 	 
 	 
@@ -41,7 +42,7 @@ public class Player {
 		 this.grid = grid;
 		 types = new TileType[3];
 		 this.types[0] = TileType.Mountain;
-		 this.types[1] = TileType.Sand;
+		 this.types[1] = TileType.Way;
 		 this.types[2] = TileType.Rock;
 		 this.index = 0;
 		 this.waveManager = waveManager;
@@ -54,6 +55,7 @@ public class Player {
 		 this.holdingUpgrade = false;
 		 this.holdingRefund = false;
 		 this.tempTower = null;
+		 this.win = false;
 	 }
 	 
 	 public void SetTile() {
@@ -127,7 +129,7 @@ public class Player {
 
 	 private void placeTower() {
 	 	if (holdingTower) {
-			if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TileType.Sand
+			if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TileType.Way
 					&& !grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).isSolic()
 					&& credits >= tempTower.getBuyingCost()) {
 				towerList.add(tempTower);
@@ -218,5 +220,13 @@ public class Player {
 
 	public static void setCredits(int credits) {
 		Player.credits = credits;
+	}
+
+	public static boolean isWin() {
+		return win;
+	}
+
+	public static void setWin(boolean win) {
+	 	Player.win = win;
 	}
 }

@@ -34,10 +34,10 @@ public class SniperTower extends BasicTower {
     }
 
     private static Texture NormalTowerTexture = QuickLoad("snipertower");
-    private static final int DAMAGE = 10;
+    private static final float DAMAGE = 10;
     private static final float FIRINGSPEED = 60;
-    private static final int BUYINGCOST = 150;
+    private static final int BUYINGCOST = 300;
     private static final float RANGE = 400;
     private static final int REFUNDPRIZE = 100;
-    private static final int UPGRADEPRIZE = 75;
+    private static final int UPGRADEPRIZE = 200;
 }

@@ -8,7 +8,7 @@ public class StateManager {
     public static MainMenu mainMenu;
     public static Game game;
     public static AfterGame afterGame;
-    private static boolean restarted = false;
+    public static boolean restarted = false;
 
     public static void update() {
         switch (gameState) {
@@ -25,10 +25,6 @@ public class StateManager {
             case AFTERGAME:
                 if (afterGame == null)
                     afterGame = new AfterGame();
-                if (restarted == false) {
-                    game = new Game();
-                    restarted = true;
-                }
                 afterGame.update();
                 break;
         }

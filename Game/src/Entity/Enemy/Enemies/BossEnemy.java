@@ -20,7 +20,7 @@ public class BossEnemy extends Enemy {
     public static Texture BossEnemy = QuickLoad("enemyBoss");
     private static final float SPEED = 1;
     private static final int HEALTH = 30;
-    private static final int REWARD = 200;
+    private static final int REWARD = 100;
     private static final int DAMAGE = 5;
     private static final float ARMOR = 8;
 }

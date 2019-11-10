@@ -20,7 +20,7 @@ public abstract class BasicTower implements Entity {
     protected float angle;
     protected int width;
     protected int height;
-    protected int damage;
+    protected float damage;
     protected int level;
     protected Texture basicTexture;
     protected Tile startTile;
@@ -154,11 +154,11 @@ public abstract class BasicTower implements Entity {
         BasicTower.upgradePrize = upgradePrize;
     }
 
-    public int getDamage() {
+    public float getDamage() {
         return damage;
     }
 
-    public void setDamage(int damage) {
+    public void setDamage(float damage) {
         this.damage = damage;
     }
 }

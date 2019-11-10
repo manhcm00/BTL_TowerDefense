@@ -23,8 +23,8 @@ public abstract class Bullet implements Entity {
 
 
     public Bullet(Enemy target, BasicTower tower) {
-        this.x = tower.getX() + Game.TILE_SIZE / 2 - 3;
-        this.y = tower.getY() + Game.TILE_SIZE / 2 - 3;
+        this.x = tower.getX() + Game.TILE_SIZE / 2 - 4;
+        this.y = tower.getY() + Game.TILE_SIZE / 2 - 4;
         this.target = target;
         this.tower = tower;
         this.damage = tower.getDamage();
@@ -38,7 +38,7 @@ public abstract class Bullet implements Entity {
     }
 
     private void calculateDirection() {
-        double angle = Math.atan2((target.getY() - y + Game.TILE_SIZE / 4), (target.getX() - x + Game.TILE_SIZE / 4));
+        double angle = Math.atan2((target.getY() - y + Game.TILE_SIZE / 2 ), (target.getX() - x + Game.TILE_SIZE / 2));
         xVloctity = (float) Math.cos(angle);
         yVloctity = (float) Math.sin(angle);
     }
