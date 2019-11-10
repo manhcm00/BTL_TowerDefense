@@ -5,6 +5,7 @@ import Entity.Enemy.Enemy;
 import Entity.Entity;
 import Player.Player;
 import Tile.Tile;
+import helpers.musicStuff;
 import org.newdawn.slick.opengl.Texture;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public abstract class BasicTower implements Entity {
     protected Enemy target;
     protected float range;
     protected static int buyingCost, refundPrize, upgradePrize;
+    protected musicStuff sound;
 
     public BasicTower(Texture basicTexture, Tile startTile, ArrayList<Enemy> enemies) {
         this.basicTexture = basicTexture;

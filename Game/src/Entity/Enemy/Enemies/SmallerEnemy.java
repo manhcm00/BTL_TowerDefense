@@ -21,7 +21,7 @@ public class SmallerEnemy extends Enemy {
     public static Texture SmallerEnemy = QuickLoad("enemySmaller");
     private static final float SPEED = 8;
     private static final int HEALTH = 5;
-    private static final int REWARD = 20;
+    private static final int REWARD = 10;
     private static final int DAMAGE = 1;
     private static final float ARMOR = 1;
 }

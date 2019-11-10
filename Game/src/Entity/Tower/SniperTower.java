@@ -23,8 +23,10 @@ public class SniperTower extends BasicTower {
 
     protected void shoot() {
         timeSinceLastShot = 0;
-        if (getTarget() != null && distance(getTarget()) < this.range)
+        if (getTarget() != null && distance(getTarget()) < this.range) {
             projectiles.add(new SniperBullet(getTarget(), this));
+            sound.playSoundOfSniperGun();
+        }
         if(!projectiles.isEmpty() && distance(getTarget()) < this.range) {
             for (Bullet p : projectiles) {
                 if (p.isArrivedAtTarget()) projectiles.remove(p);

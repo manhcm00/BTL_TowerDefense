@@ -4,6 +4,7 @@ import Entity.Bullet.Bullet;
 import Entity.Bullet.NormalBullet;
 import Entity.Enemy.Enemy;
 import Tile.Tile;
+import helpers.musicStuff;
 import org.newdawn.slick.opengl.Texture;
 
 import java.util.ArrayList;
@@ -24,8 +25,10 @@ public class NormalTower extends BasicTower {
 
     protected void shoot() {
         timeSinceLastShot = 0;
-        if (getTarget() != null && distance(getTarget()) < this.range)
+        if (getTarget() != null && distance(getTarget()) < this.range) {
             projectiles.add(new NormalBullet(getTarget(), this));
+            sound.playSoundOfNormalGun();
+        }
         if(!projectiles.isEmpty() && distance(getTarget()) < this.range) {
             for (Bullet p : projectiles) {
                 if (p.isArrivedAtTarget()) projectiles.remove(p);

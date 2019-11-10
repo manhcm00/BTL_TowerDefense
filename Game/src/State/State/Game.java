@@ -8,6 +8,7 @@ import Map.NormalMap;
 import Tile.TileGrid;
 import Player.Player;
 import UI.*;
+import helpers.musicStuff;
 import org.lwjgl.input.Mouse;
 import org.newdawn.slick.opengl.Texture;
 
@@ -21,8 +22,10 @@ public class Game {
     public static final int TILE_SIZE = 32;
     private UI buttons;
     private Texture background;
+    public static musicStuff sound;
 
     public Game() {
+        sound = new musicStuff();
         grid = new TileGrid(NormalMap.map);
         waveManager = new WaveManager(grid.getTile(1 , 0), grid,20);
         player = new Player(grid, waveManager);
@@ -30,6 +33,7 @@ public class Game {
     }
 
     private void setup() {
+        sound.playStartSound();
         buttons = new UI();
         buttons.getButtons().add(new Button("snipertower", QuickLoad("buttonSniper"), 21*32, 32));
         buttons.getButtons().add(new Button("normaltower", QuickLoad("buttonNormal"), 21*32, 128));
