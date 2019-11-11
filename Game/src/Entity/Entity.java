@@ -1,11 +1,10 @@
 package Entity;
 
 public interface Entity {
-    public float getX();
-    public float getY();
-    public void setX(float x);
-    public void setY(float y);
-    public void update();
-    public void Draw();
-
+    float getX();
+    float getY();
+    void setX(float x);
+    void setY(float y);
+    void update();
+    void Draw();
 }

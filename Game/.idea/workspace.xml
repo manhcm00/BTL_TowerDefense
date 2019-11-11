@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc78903e-d192-4fb2-9222-e7b752d2b7e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entity/Enemy/Thread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Tower/Tower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Enemy/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Enemy/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/BasicTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/MachineGunTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/NormalTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Entity/Tower/SniperTower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/BasicTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/MachineGunTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/NormalTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tower/SniperTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player/Player.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/res" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -58,6 +47,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -176,7 +166,7 @@
       <workItem from="1573371849815" duration="1639000" />
       <workItem from="1573374308318" duration="8884000" />
       <workItem from="1573389810042" duration="1888000" />
-      <workItem from="1573430785127" duration="2959000" />
+      <workItem from="1573430785127" duration="7663000" />
     </task>
     <servers />
   </component>
