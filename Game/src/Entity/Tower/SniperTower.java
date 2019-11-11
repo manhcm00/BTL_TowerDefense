@@ -21,7 +21,7 @@ public class SniperTower extends BasicTower {
         upgradePrize = UPGRADEPRIZE;
     }
 
-    protected void shoot() {
+    public void shoot() {
         timeSinceLastShot = 0;
         if (getTarget() != null && distance(getTarget()) < this.range) {
             projectiles.add(new SniperBullet(getTarget(), this));

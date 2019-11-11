@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import  static helpers.Artist.*;
 
-public abstract class Enemy implements Entity {
+public abstract class Enemy implements Thread {
     protected int width , height , currentCheckPoint;
     protected float x , y , speed, health, armor;
     protected int damage;
@@ -162,7 +162,7 @@ public abstract class Enemy implements Entity {
         }
     }
 
-    private static int setupdDrection (int x, int y) {
+    public int setupdDrection (int x, int y) {
         if (x > 0 && y == 0) return 0;
         if (x == 0 && y > 0) return 90;
         if (x < 0 && y > 0) return  180;

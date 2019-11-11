@@ -4,7 +4,6 @@ import Entity.Bullet.Bullet;
 import Entity.Bullet.NormalBullet;
 import Entity.Enemy.Enemy;
 import Tile.Tile;
-import helpers.musicStuff;
 import org.newdawn.slick.opengl.Texture;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class NormalTower extends BasicTower {
         upgradePrize = UPGRADEPRIZE;
     }
 
-    protected void shoot() {
+    public void shoot() {
         timeSinceLastShot = 0;
         if (getTarget() != null && distance(getTarget()) < this.range) {
             projectiles.add(new NormalBullet(getTarget(), this));

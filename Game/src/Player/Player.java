@@ -131,7 +131,7 @@ public class Player {
 	 	if (holdingTower) {
 			if (grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).getType() != TileType.Way
 					&& !grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).isSolic()
-					&& credits >= tempTower.getBuyingCost()) {
+					&& credits >= tempTower.getBuyingCost() && Mouse.getX() > 0 && Mouse.getX() < 640) {
 				towerList.add(tempTower);
 				grid.getTile(Mouse.getX() / 32,(HEIGHT - Mouse.getY() - 1) / 32).setTower(tempTower);
 				grid.getTile(Mouse.getX() / 32, (HEIGHT - Mouse.getY() - 1) / 32).setSolic(true);

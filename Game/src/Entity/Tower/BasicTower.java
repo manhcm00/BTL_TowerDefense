@@ -2,7 +2,6 @@ package Entity.Tower;
 
 import Entity.Bullet.Bullet;
 import Entity.Enemy.Enemy;
-import Entity.Entity;
 import Player.Player;
 import Tile.Tile;
 import helpers.musicStuff;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 import static helpers.Artist.*;
 import static helpers.Clock.Delta;
 
-public abstract class BasicTower implements Entity {
+public abstract class BasicTower implements Tower {
     protected float x;
     protected float y;
     protected float timeSinceLastShot;
@@ -47,13 +46,13 @@ public abstract class BasicTower implements Entity {
         this.level = 1;
     }
 
-    protected float distance(Enemy enemy) {
+    public float distance(Enemy enemy) {
         if (enemy != null)
             return (float) Math.sqrt((enemy.getX() - x)*(enemy.getX() - x) + (enemy.getY() - y)* (enemy.getY() - y));
         else return 10000;
     }
 
-    protected Enemy getTarget() {
+    public Enemy getTarget() {
 
         for (int i = 0; i< enemies.size(); i++) {
             if (enemies.get(i).isAlive()) {
@@ -70,7 +69,7 @@ public abstract class BasicTower implements Entity {
         else return 0;
     }
 
-    abstract protected void shoot();
+    public abstract void shoot();
 
     public void update() {
         timeSinceLastShot += Delta();
